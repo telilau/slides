@@ -1,0 +1,2451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-11-29 Wed 15:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>James</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">James</h1>
+
+<div id="outline-container-org4d2b949" class="outline-2">
+<h2 id="org4d2b949">Introductory Matters</h2>
+<div class="outline-text-2" id="text-org4d2b949">
+</div><div id="outline-container-org56f311d" class="outline-3">
+<h3 id="org56f311d">Controversial view towards James</h3>
+</div>
+<div id="outline-container-orgacf680d" class="outline-3">
+<h3 id="orgacf680d"><span class="todo TODO">TODO</span> Rhetorical Voice</h3>
+<div class="outline-text-3" id="text-orgacf680d">
+</div><div id="outline-container-org33d394e" class="outline-4">
+<h4 id="org33d394e">Introduction</h4>
+<div class="outline-text-4" id="text-org33d394e">
+<ul class="org-ul">
+<li>Diaspora Letter
+<ul class="org-ul">
+<li>Generally about how to preserve one's Jewishness in the midst of a world antagonistic to Jewish culture, faith, and values (BECNT)</li>
+</ul></li>
+<li>Multi-thematic
+<ul class="org-ul">
+<li>Lack of clear organization</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b17063" class="outline-4">
+<h4 id="org4b17063">Greco-Roman moralistic discourse</h4>
+<div class="outline-text-4" id="text-org4b17063">
+<ul class="org-ul">
+<li>Good Greek
+<ul class="org-ul">
+<li>Residents of the mixed Gentile territory of Galilee probably knew Greek quite well.</li>
+<li>Sepphoris, a few miles from Nazareth, was a major center of Greek culture</li>
+</ul></li>
+<li>Focus is on practical Christianity. The goal of doctrine is a godly character and righteous behavior</li>
+<li>Style resembles ancient moralists
+<ul class="org-ul">
+<li>Favor imperative mood; brevity; aphoristic style; appeal to memory; moral exemplars; diatribe (2:14-26; 3:1-12) =&gt; Greco-Roman moral paraenesis or protrepsis.</li>
+<li>Paraenesis | protrepsis
+<ul class="org-ul">
+<li>lack thematic unity | sustained arguments and a clear focus on a limited number of issues</li>
+<li>exhortation to continue in a certain way of life | exhortation to a new and different way of life (Stowers, <i>Letter Writing in Greco-Roman Antiquity</i>)
+<ul class="org-ul">
+<li>protrespsis is conversion literature.</li>
+<li>Malherbe, <i>Moral Exhortation</i>
+<ul class="org-ul">
+<li>Protrepsis is the philosopher's proper mode of exhortation. Together with refutation and reproof, which exposes the human condition […], and teaching, protrepsis does not make an oratorical display but reveals the inner inconsistency in the philosopher's hearers and brings them to conversion.</li>
+<li>Paraenesis is "broader in scope than protrepsis." It is "moral exhortation in which someone is advised to pursue or abstain from something." The speaker is not instructing the listener but reminding, using phrases such as "as you know." Other characteristics include compliments for adhering to what is exhorted, encouragement to continue, and examples.</li>
+</ul></li>
+</ul></li>
+<li>The modern distinction between paraenesis and protrespsis is not held by classical philosophers and they sometimes used the two terms interchangeably</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd474c17" class="outline-4">
+<h4 id="orgd474c17">Scriptural</h4>
+<div class="outline-text-4" id="text-orgd474c17">
+<ul class="org-ul">
+<li>James' Greek is biblical. Almost all the vocabulary of James is found also in the LXX.
+<ul class="org-ul">
+<li>Exception: προσωπολημψία (not found in secular Greek or the LXX). But it is a Christian creation for the Hebrew "to lift the face."</li>
+</ul></li>
+<li>James' symbolic world is Scripture.
+<ul class="org-ul">
+<li>Positive appreciation of the law: perfect law of liberty; royal law; James cites from the Decalogue and insists that all the law must be kept.</li>
+<li>LTJ: Lev 19 is the basis for his instructions</li>
+</ul></li>
+<li>Prophetic
+<ul class="org-ul">
+<li>Language echoes that of Isaiah and Amos in its condemnation of merchants and oppresive wealthy landowners.</li>
+<li>God will come in judgment to vindicate the poor (5:1-9)</li>
+<li>Call to conversion from double-mindedness (4:7-10)</li>
+</ul></li>
+<li>Wisdom tradition of Scripture
+<ul class="org-ul">
+<li>Difference with other wisdom literature
+<ul class="org-ul">
+<li>Focus is on the assembly rather than the household
+<ul class="org-ul">
+<li>No attention on household relationships</li>
+<li>No attention on sexual behavior</li>
+</ul></li>
+<li>Egalitarian rather than hierarchical
+<ul class="org-ul">
+<li>No father/child language (e.g. Paul)</li>
+<li>Teachers are no better than others, but are held to a more severe judgment</li>
+<li>Elders are summoned by the weakest in the community</li>
+<li>They are all brothers and sisters</li>
+</ul></li>
+<li>Communal rather than individual ("my son")
+<ul class="org-ul">
+<li>Individuals are called to mutual care and compassion, sharing their gifts with those who are less fortunate</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7e360b9" class="outline-4">
+<h4 id="org7e360b9">Is James a Jewish discourse to which a Christian added only 2 references to Jesus (1:1; 2:1)?</h4>
+<div class="outline-text-4" id="text-org7e360b9">
+<ul class="org-ul">
+<li>Jewish
+<ul class="org-ul">
+<li>Positive view of the law</li>
+<li>Jewish flavor is seen not in exclusion (e.g. the kind that sees covenant in terms of ethnicity or ritual), but in godly behavior.</li>
+<li><p>
+Strong connection to OT, esp. Lev 19 (cf. BECNT). Perhaps, it is better to say that James is adapting an ethical teaching of Jesus, for whom Lev 19 plays a pivotal role. This is also found in the Sermon on the Mount.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">19:10</td>
+<td class="org-left">Show concern for the poor and the sojourner (cf. Jas 2:1–6, 15–16, 25)</td>
+</tr>
+
+<tr>
+<td class="org-right">19:12</td>
+<td class="org-left">Do not swear falsely (cf. Jas 5:12)</td>
+</tr>
+
+<tr>
+<td class="org-right">19:13</td>
+<td class="org-left">Do not oppress neighbor (cf. Jas 5:1–6)</td>
+</tr>
+
+<tr>
+<td class="org-right">19:15</td>
+<td class="org-left">Do not show partiality (cf. Jas 2:1–11)</td>
+</tr>
+
+<tr>
+<td class="org-right">19:16</td>
+<td class="org-left">Do not slander or falsely accuse (cf. Jas 4:11)</td>
+</tr>
+
+<tr>
+<td class="org-right">19:17–18</td>
+<td class="org-left">Do not hate brother in heart or take vengeance, but love neighbor as self (cf. Jas 2:8; 4:1)</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+<li>Christian (even though Jesus is only explicitly referenced 2x).
+<ul class="org-ul">
+<li>Shares Christian eschatological orientation
+<ul class="org-ul">
+<li>E.g. Motivation for ethics is knowing that the Lord is coming to judge.</li>
+</ul></li>
+<li>But almost no Christological development.
+<ul class="org-ul">
+<li>E.g. no "union with Christ"; does not show how death and resurrection of Jesus are tied to God's mercy; no stories of Jesus; no mention of Holy Spirit;</li>
+</ul></li>
+<li>Extensive use of Christian language that we find in other letters
+<ul class="org-ul">
+<li>kyrios, doulos, faith, love, kingdom, promise, parousia</li>
+<li>These terms can be found in other Jewish literature, but it is only in the writings of the Christian movement that we find them in such concentration.</li>
+</ul></li>
+<li>Heavy use of Jesus' sayings, esp. those in Matt.
+<ul class="org-ul">
+<li>God responds to those who ask (1:5 | Matt 7:7)</li>
+<li>Having faith without doubting (1:6 | Matt 21:21)</li>
+<li>Those who endure will be saved (1:12 | Matt 10:22)</li>
+<li>Those who humble themselves will be exalted (4:6-10 | Matt 23:12)</li>
+<li>Judge not lest they be judged (4:11-12; 5:9 | Matt 7:1)</li>
+<li>Judge standing at the door (5:9 | Matt 24:33)</li>
+<li><p>
+Compare Jas 5:12 | Matt 5:34-35, 37
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Jas 5:12</th>
+<th scope="col" class="org-left">Matt 5:34-35, 37</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Above all, my brothers, do not swear</td>
+<td class="org-left">But I tell you, Do not swear at all</td>
+</tr>
+
+<tr>
+<td class="org-left">not by heaven</td>
+<td class="org-left">either by heaven, for it is God’s throne;</td>
+</tr>
+
+<tr>
+<td class="org-left">or by earth</td>
+<td class="org-left">or by the earth, for it is his footstool;</td>
+</tr>
+
+<tr>
+<td class="org-left">or by anything else.</td>
+<td class="org-left">or by Jerusalem, for it is the city of the Great King.</td>
+</tr>
+
+<tr>
+<td class="org-left">Let your “Yes” be yes,</td>
+<td class="org-left">Simply let your “Yes” be “Yes,”</td>
+</tr>
+
+<tr>
+<td class="org-left">and your “No,” no,</td>
+<td class="org-left">and your “No,” “No”;</td>
+</tr>
+
+<tr>
+<td class="org-left">or you will be condemned.</td>
+<td class="org-left">anything beyond this comes from the evil one.</td>
+</tr>
+</tbody>
+</table></li>
+<li>Explanation: Both James and Matt were disciples of a particular tradition, namely the teaching of Jesus.
+<ul class="org-ul">
+<li>Some say that James is closer to Q than to the redacted Synoptic versions.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge345e7a" class="outline-4">
+<h4 id="orge345e7a">Contrasts</h4>
+<div class="outline-text-4" id="text-orge345e7a">
+<ul class="org-ul">
+<li>James is combating a dominant culture, rather than supporting a stable structure</li>
+<li><p>
+Examples
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">rich</td>
+<td class="org-left">poor</td>
+</tr>
+
+<tr>
+<td class="org-left">arrogant</td>
+<td class="org-left">lowly</td>
+</tr>
+
+<tr>
+<td class="org-left">oppressor</td>
+<td class="org-left">innocent righteous</td>
+</tr>
+
+<tr>
+<td class="org-left">error</td>
+<td class="org-left">truth (1:18; 1:16)</td>
+</tr>
+
+<tr>
+<td class="org-left">war</td>
+<td class="org-left">peace (3:16-4:2)</td>
+</tr>
+
+<tr>
+<td class="org-left">anger</td>
+<td class="org-left">meekness (1:20-21)</td>
+</tr>
+
+<tr>
+<td class="org-left">envious craving</td>
+<td class="org-left">generous giving (4:1-3; 1:17)</td>
+</tr>
+
+<tr>
+<td class="org-left">hearing the word only</td>
+<td class="org-left">doing the word (1:22, 25)</td>
+</tr>
+
+<tr>
+<td class="org-left">forgetting</td>
+<td class="org-left">remembering (1:24-25)</td>
+</tr>
+
+<tr>
+<td class="org-left">instability</td>
+<td class="org-left">perfection (1:4, 6-11, 17, 25)</td>
+</tr>
+
+<tr>
+<td class="org-left">foolishness (1:26)</td>
+<td class="org-left">wisdom (1:5; 3:13)</td>
+</tr>
+
+<tr>
+<td class="org-left">filth</td>
+<td class="org-left">purity (1:21, 27; 4:8)</td>
+</tr>
+
+<tr>
+<td class="org-left">curse</td>
+<td class="org-left">blessing (3:9)</td>
+</tr>
+
+<tr>
+<td class="org-left">destroy</td>
+<td class="org-left">save (4:12)</td>
+</tr>
+
+<tr>
+<td class="org-left">death</td>
+<td class="org-left">life (1:16)</td>
+</tr>
+
+<tr>
+<td class="org-left">earthbound and unspiritual (3:15)</td>
+<td class="org-left">indwelling spirit (4:5)</td>
+</tr>
+
+<tr>
+<td class="org-left">wisdom from below</td>
+<td class="org-left">wisdom from above</td>
+</tr>
+
+<tr>
+<td class="org-left">God resists the arrogant</td>
+<td class="org-left">God raises the lowly (4:5; 5:6)</td>
+</tr>
+
+<tr>
+<td class="org-left">friendship with the world</td>
+<td class="org-left">friendship with God</td>
+</tr>
+</tbody>
+</table></li>
+<li>Friends with the world
+<ul class="org-ul">
+<li>The world is depicted more as a system of meaning (or value system) rather than as a place</li>
+<li>See 3:13-4:3 where James elaborates on the logic of envy, a system of zero-sum game. To succeed is to eliminate the competition.
+<ul class="org-ul">
+<li>Attitude seen in those who boast in the capacity to gain profit (4:13-16)</li>
+<li>Maximize profit by holding back wages (5:1-6)</li>
+<li>Seek an advantage by
+<ul class="org-ul">
+<li>Partiality in judgment (2:1-4)</li>
+<li>Refusing to help others (2:14-15)</li>
+<li>Judging and slandering others (4:12)</li>
+<li>Grumbling against others (5:9)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Friends with God
+<ul class="org-ul">
+<li>Holding to God's value rather than the world.
+<ul class="org-ul">
+<li>E.g. Abraham.
+<ul class="org-ul">
+<li>World system: Should cling to his only and beloved son, in order to ensure that he obtains the blessing God has promised.</li>
+<li>Friend of God: Sees God as the giver of every good and perfect gift. We give back to God because he is capable of giving μείζονα χάριν (more grace or a greater gift). To be a friend of God is to see all of life as constantly gifted by God, and therefore open to the sharing of possessions and a life of cooperation and communion rather than competition and individualism.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org81d869a" class="outline-3">
+<h3 id="org81d869a">Genre</h3>
+<div class="outline-text-3" id="text-org81d869a">
+<ul class="org-ul">
+<li>Wisdom literature</li>
+<li>Series of homilies (NIVSB)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd0f5790" class="outline-3">
+<h3 id="orgd0f5790">Occasion and date</h3>
+<div class="outline-text-3" id="text-orgd0f5790">
+</div><div id="outline-container-orgb06bd2d" class="outline-4">
+<h4 id="orgb06bd2d">Readers</h4>
+<div class="outline-text-4" id="text-orgb06bd2d">
+<ul class="org-ul">
+<li>Jewish Christians living in the diaspora (Moo)
+<ul class="org-ul">
+<li>To the diaspora (1:1) | assembly called a synagogue (2:2) | church comprised mostly Jewish believers in the earliest stages</li>
+<li>Construal
+<ul class="org-ul">
+<li>Referent: Jewish Christians that fled Israel because of the persecution that arose after Stephen's death</li>
+<li>Validation
+<ul class="org-ul">
+<li>Jewish Christians in the diaspora would experience the trials that James frequently refers.</li>
+<li>If they were formerly from Jerusalem, it makes sense that their former spiritual leader, James, would write to them.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Mixed audience: Jewish and Gentile (God-fearer) Christians (BECNT).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga5e48cf" class="outline-4">
+<h4 id="orga5e48cf">Dates</h4>
+<div class="outline-text-4" id="text-orga5e48cf">
+<ul class="org-ul">
+<li>AD 48: Apostolic council</li>
+<li>AD 62: James is martyred</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org771e4ed" class="outline-4">
+<h4 id="org771e4ed">Author and Date</h4>
+<div class="outline-text-4" id="text-org771e4ed">
+<ul class="org-ul">
+<li>4 views
+<ol class="org-ol">
+<li><span class="underline">Written by James before the Galatians controversy and apostolic council (mid 40s)</span>
+<ul class="org-ul">
+<li>Before the apostolic council
+<ul class="org-ul">
+<li>James shows awareness of Paul's emphasis on "justification by faith alone," but does not really come to grip with what Paul meant by that doctrine. This misunderstanding is unlikely after Paul and James met at the apostolic council in AD 48.</li>
+<li>James shows no awareness of the conflict over Torah that emerged in the early church as a result of Gentile mission. This issue was brought to the front at the apostolic council. So, he would have been aware of the issue after that time. James is not writing to Gentiles, so it was not necessary to bring up this topic. But his references to Torah make more sense if he was unaware of the issue.</li>
+</ul></li>
+<li>Prior to parting of the ways between Judaism and Christianity</li>
+<li>Issues for this proposal:
+<ul class="org-ul">
+<li>James' supposed reaction to Paulinism
+<ul class="org-ul">
+<li>James is not reacting to Paul or even a misunderstanding of Paul. Rather, he was reacting against hyprocrisy (which could have come about from Gentile believers, who under the influence of Hellenistic pagan religion divorced ethics from religion)</li>
+</ul></li>
+<li>Good Greek</li>
+</ul></li>
+</ul></li>
+<li>Written by James in response to some form of Paulinism, correcting the idea that righteousness can be acquired simply by acknowledging certain theological propositions</li>
+<li>Letter is pseudonymous, written at the end of 1st century or early 2nd century by a proponent of Jewish Christianity</li>
+<li>Much of the material goes back to James, but has been edited and assembled by someone with Greek literary training.</li>
+</ol></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6bee33c" class="outline-3">
+<h3 id="org6bee33c">Themes and Central argument</h3>
+<div class="outline-text-3" id="text-org6bee33c">
+</div><div id="outline-container-orgedf928a" class="outline-4">
+<h4 id="orgedf928a">Themes</h4>
+<div class="outline-text-4" id="text-orgedf928a">
+</div><div id="outline-container-org598b300" class="outline-5">
+<h5 id="org598b300"><span class="todo TODO">TODO</span> Intermingling of 3 themes (Blomberg, Davids)</h5>
+<div class="outline-text-5" id="text-org598b300">
+<ul class="org-ul">
+<li>Trials in the Christian life</li>
+<li>Wisdom</li>
+<li>Poverty and riches</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbb45815" class="outline-5">
+<h5 id="orgbb45815">Central verses</h5>
+<div class="outline-text-5" id="text-orgbb45815">
+<ul class="org-ul">
+<li><p>
+Purpose of the letter: Jas 5:19-20 (Davids, <i>A Theology of James, Peter, and Jude</i>)
+</p>
+<p class="verse">
+5:19 My brothers and sisters, if one of you should wander from the truth and someone should bring that person back, 20 remember this: Whoever turns a sinner from the error of their way will save them from death and cover over a multitude of sins.<br />
+</p></li>
+<li><p>
+Thesis: Jas 1:27 (Blomberg)
+</p>
+<p class="verse">
+1:27 Religion that God our Father accepts as pure and faultless is this: to look after orphans and widows in their distress and to keep oneself from being polluted by the world.<br />
+</p></li>
+<li><p>
+Spiritual wholeness (Moo)
+</p>
+<p class="verse">
+4:4 You adulterous people, don’t you know that friendship with the world means enmity against God? Therefore, anyone who chooses to be a friend of the world becomes an enemy of God. 5 Or do you think Scripture says without reason that he jealously longs for the spirit he has caused to dwell in us? 6 But he gives us more grace. That is why Scripture says:<br />
+<br />
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;“God opposes the proud<br />
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;but shows favor to the humble.”<br />
+<br />
+7 Submit yourselves, then, to God. Resist the devil, and he will flee from you. 8 Come near to God and he will come near to you. Wash your hands, you sinners, and purify your hearts, you double-minded. 9 Grieve, mourn and wail. Change your laughter to mourning and your joy to gloom. 10 Humble yourselves before the Lord, and he will lift you up.<br />
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org446d300" class="outline-4">
+<h4 id="org446d300"><span class="todo TODO">TODO</span> Central argument</h4>
+<div class="outline-text-4" id="text-org446d300">
+</div><div id="outline-container-org35f3e0c" class="outline-5">
+<h5 id="org35f3e0c">Genuine faith (BECNT)</h5>
+<div class="outline-text-5" id="text-org35f3e0c">
+<ul class="org-ul">
+<li>Genuine faith must be evident in life. If one wishes to avoid false faith, the "faith said" must correspond to the "life led."</li>
+<li>James is often thought of as the NT book about the importance of works. But works are important because they are indispensable to true faith.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdcd62dd" class="outline-5">
+<h5 id="orgdcd62dd">Spiritual wholeness (Moo)</h5>
+<div class="outline-text-5" id="text-orgdcd62dd">
+<ul class="org-ul">
+<li>Readers are to stop compromising with worldly values and beliefs; rather, they are to give themselves wholly to the Lord.</li>
+<li>Climax of the letter, 4:4-10.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3867617" class="outline-5">
+<h5 id="org3867617">Friendship with the World/Friendship with God (LTJ)</h5>
+</div>
+<div id="outline-container-org5e81a1c" class="outline-5">
+<h5 id="org5e81a1c">God's single-mindedness (Lau)</h5>
+<div class="outline-text-5" id="text-org5e81a1c">
+<ul class="org-ul">
+<li>Believers are to imitate God's simplicity or single-mindedness. God never wavers in his character or purposes, believers should shun all duplicity or vacillation. They should be trustworthy, people of integrity.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4ca7217" class="outline-3">
+<h3 id="org4ca7217">Theology</h3>
+<div class="outline-text-3" id="text-org4ca7217">
+<ul class="org-ul">
+<li>Dibelius: James has no theology. Presumably because of its genre as paraenesis, it does not articulate a coherent Christology nor soteriology.</li>
+<li>The above view is too pessimistic.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb725174" class="outline-3">
+<h3 id="orgb725174"><span class="todo TODO">TODO</span> James and Paulinism</h3>
+<div class="outline-text-3" id="text-orgb725174">
+<ul class="org-ul">
+<li>*James is reacting against a misunderstanding of Paul
+<ul class="org-ul">
+<li>Assumption: No Jew prior to Paul ever supposed that faith without works did matter with God, so James could not have faced this problem prior to Paul.</li>
+<li>Refutation:
+<ul class="org-ul">
+<li>James could be addressing Gentile Christians. Among pagans, the connection between religion and ethics could be loose.</li>
+<li>Even if James was addressing Jewish Christians, his refutation of faith apart from works is similar to Jesus' excoriation of Pharisees as hypocrites who focus on the Sabbath and food laws instead of doing things that are most important to God.</li>
+</ul></li>
+</ul></li>
+<li>James is not reacting against Paul
+<ul class="org-ul">
+<li>Similarity between the language of Jas 2 and Gal-Rom is due to a common heritage. They are not in dialogue.
+<ul class="org-ul">
+<li>The problem in James is a false and empty faith. In Paul, it concerns expressions of Jewish committment to Torah (e.g. circumcision) and reliance on one's observance of Torah or ethnicity.</li>
+<li>In James, works are generic, not boundary markers. But do note that Paul also criticizes these generic works too.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgadb9507" class="outline-3">
+<h3 id="orgadb9507"><span class="todo TODO">TODO</span> Justification in James and Paul</h3>
+<div class="outline-text-3" id="text-orgadb9507">
+</div><div id="outline-container-org5ccebc9" class="outline-4">
+<h4 id="org5ccebc9">James' soteriology</h4>
+<div class="outline-text-4" id="text-org5ccebc9">
+<ul class="org-ul">
+<li>Faith without works cannot save (Τί τὸ ὄφελος, ἀδελφοί μου, ἐὰν πίστιν λέγῃ τις ἔχειν ἔργα δὲ μὴ ἔχῃ; μὴ δύναται ἡ πίστις σῶσαι αὐτόν; 2:14)</li>
+<li>Faith without works is dead (ἡ πίστις, ἐὰν μὴ ἔχῃ ἔργα, νεκρά ἐστιν καθʼ ἑαυτήν; 2:17)</li>
+<li>Faith without works is useless (ἡ πίστις χωρὶς τῶν ἔργων ἀργή ἐστιν; 2:20)</li>
+<li>A person is justified by what they do and not by faith alone (ἐξ ἔργων δικαιοῦται ἄνθρωπος καὶ οὐκ ἐκ πίστεως μόνον; 2:24)</li>
+<li>Abraham's faith and works were working together, and his faith was made complete by what he did (ἡ πίστις συνήργει τοῖς ἔργοις αὐτοῦ καὶ ἐκ τῶν ἔργων ἡ πίστις ἐτελειώθη; 2;22)</li>
+<li>Rahab was considered righteous for what she did (Ῥαὰβ ἡ πόρνη οὐκ ἐξ ἔργων ἐδικαιώθη; 2:25)</li>
+<li>Faith without works is dead (ἡ πίστις χωρὶς ἔργων νεκρά ἐστιν; 2:26)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd12b5dc" class="outline-4">
+<h4 id="orgd12b5dc">James and the New Perspective</h4>
+<div class="outline-text-4" id="text-orgd12b5dc">
+</div><div id="outline-container-org46ef7b6" class="outline-5">
+<h5 id="org46ef7b6">Recap of covenantal nomism as presented by Sanders</h5>
+<div class="outline-text-5" id="text-org46ef7b6">
+<ul class="org-ul">
+<li>How you "get in" is by grace (God's election of Israel as his covenant people)</li>
+<li>How you "stay in" is by obedience/works (obedience to the law is the condition for <i>remaining</i> in God's covenant, not <i>earning</i> it)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org04cdde5" class="outline-5">
+<h5 id="org04cdde5">Jas 2 and covenantal nomism</h5>
+<div class="outline-text-5" id="text-org04cdde5">
+<ul class="org-ul">
+<li>Jas 2 appears to cohere with covenantal nomism
+<ul class="org-ul">
+<li>Christian life begins with grace (1:18, "he chose to give us birth through the word of truth")</li>
+<li>Yet, James insist that final salvation, deliverance in the judgment of God (i.e. justification in Jas 2) takes into account one's works.</li>
+<li>Consequently, we have the pattern of covenantal nomism reinterpreted in the new covenant
+<ul class="org-ul">
+<li>One gets into relationship with God by faith in Christ</li>
+<li>But, one stays in that relationship through obedience to the royal law.</li>
+<li>In essence, we have a synergistic understanding of James' soteriology.</li>
+</ul></li>
+</ul></li>
+<li>This interpretation is possible if we read James alone by itself. But when James is placed within the NT cannon, it conflicts with other NT texts, esp. Paul.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1b5aca8" class="outline-5">
+<h5 id="org1b5aca8">Necessary corrections to covenantal nomism (ignore for now)</h5>
+<div class="outline-text-5" id="text-org1b5aca8">
+<ul class="org-ul">
+<li>Variegated Judaism
+<ul class="org-ul">
+<li>To claim that 2nd temple Judaism demonstrates the pattern of covenantal nomism fails to recognize its diversity. I affirm that many Jews, perhaps the majority of Jews, were more legalistic than the picture presented by Sanders.</li>
+</ul></li>
+<li>"Getting in" and "staying in" cannot be directly applied to the issue of salvation
+<ul class="org-ul">
+<li>While "getting in" and "staying in" may be valid for covenantal status, it doesn't directly apply to salvation
+<ul class="org-ul">
+<li>"Getting in" as applied to salvation: 
+<ul class="org-ul">
+<li>While "getting in" is of grace indeed, it also requires a definite commitment, repentance, and faith, on the part of the beneficiaries</li>
+</ul></li>
+<li>"Staying in" as applied to salvation: 
+<ul class="org-ul">
+<li>If those who "stay in" are to show works, their perseverance is the fruit of grace, their willing and doing is God's doing ("for it is God who works in you to will and to act in order to fulfill his good purpose"; Phil 2:13).</li>
+</ul></li>
+<li>We should remember that belonging to the covenant (in the sense of being born a Jew) was not a guarantee of salvation. Jews viewed salvation as a final decision made by God at judgment.</li>
+</ul></li>
+<li>Synergism
+<ul class="org-ul">
+<li>God's grace was necessary for salvation, but the individual Jew still had to obey the law in order to be saved.</li>
+<li>In other words, Second Temple Jewish soteriology was synergistic. Humans, through obedience to the law, cooperate with God's grace in order to attain salvation.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd3c6125" class="outline-4">
+<h4 id="orgd3c6125">Theological interaction (James and Paul)</h4>
+<div class="outline-text-4" id="text-orgd3c6125">
+</div><div id="outline-container-org5eb818b" class="outline-5">
+<h5 id="org5eb818b">Issue</h5>
+<div class="outline-text-5" id="text-org5eb818b">
+<ul class="org-ul">
+<li>Justification by faith or justification by works</li>
+<li>Both James and Paul cite Gen 15:6 in support of their opposite views</li>
+<li>Implication:
+<ul class="org-ul">
+<li>It appears that one writer knew the other, and was deliberately arguing against him</li>
+<li>Soteriology: James appears to be synergistic | Paul appears to be monergistic</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9a7937f" class="outline-5">
+<h5 id="org9a7937f">Relationship between the letter of James and the Pauline writings</h5>
+<div class="outline-text-5" id="text-org9a7937f">
+<ul class="org-ul">
+<li>Paul and James do not have knowledge of the other, and the likeness is conincidental</li>
+<li>Paul is correcting James or a distortion of James' position</li>
+<li>James is directly contradicting Paul</li>
+<li>*James is responding to a misunderstood Pauline teaching</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2f810d5" class="outline-5">
+<h5 id="org2f810d5">Resolution of the issue on soteriology: synergistic or monergistic</h5>
+<div class="outline-text-5" id="text-org2f810d5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Jas 2:24</td>
+<td class="org-left">A person</td>
+<td class="org-left">is justified</td>
+<td class="org-left">by works</td>
+<td class="org-left">and not by faith alone</td>
+</tr>
+
+<tr>
+<td class="org-left">Rom 3:28</td>
+<td class="org-left">A person</td>
+<td class="org-left">is justified</td>
+<td class="org-left">by faith</td>
+<td class="org-left">and not by works of the law</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>Options
+<ul class="org-ul">
+<li>Paul has the same kind of synergism that is apparent in James</li>
+<li>*Paul and James have a monergistic view of salvation</li>
+</ul></li>
+<li>Interpreting Jas 2:24 and Rom 3:28 together
+<ul class="org-ul">
+<li>works (James) | works of the law (Paul)</li>
+<li>faith alone (James) | faith (Paul)</li>
+<li>justify (James) | justify (Paul)</li>
+</ul></li>
+</ul>
+
+<ul class="org-ul">
+<li>Resolution
+<ul class="org-ul">
+<li>works (James) | works of the law (Paul). 
+<ul class="org-ul">
+<li>works (James) = anything done in service to God</li>
+<li>works of the law (Paul) = ceremonial practices of the Jewish faith; those works concerned with separating the pure from the impure (as seen in 4QMMT)  | *works in a Jewish context, i.e. subset of the larger category of works (compare Rom 3:28 with Rom 4:1–8). In essence, Rom 3:28 excludes works of any kind from justification.</li>
+<li>Conclusion: works (James) is fundamentally similar to works of the law (Paul)</li>
+</ul></li>
+<li>*faith alone (James) | faith (Paul)
+<ul class="org-ul">
+<li>The use of faith alone shows clearly that James is referring to the bogus faith that he has been attacking throughout this paragraph: a faith that someone claims to have (2:14), a faith that is dead (2:17, 26) and useless (2:20).</li>
+<li>This is not the faith that Paul intends. He teaches that faith is a dynamic, powerful force, through which the believer is intimately united with Christ, his Lord. And since faith is in a Lord, the need for obedience to follow from faith is part of the meaning of the word for Paul. He can therefore speak of “the obedience of faith” (Rom 1:5) and say that it is “faith working through love” that matters in Christ (Gal 5:6). This is the same kind of faith that James is promoting in this paragraph.</li>
+</ul></li>
+<li>*justify (James) | justify (Paul) 
+<ul class="org-ul">
+<li>Problem (apparent contradiction): works are a necessary basis or means for justification (James) | works have no place in justification (Paul).</li>
+<li>Justify (Paul): initial declaration of a sinner’s innocence before God</li>
+<li>Justify (James): ultimate verdict of innocence pronounced over a person at the last judgment.</li>
+<li>Conclusion: both use justify differently. But they are complementary. “If a sinner can get into relationship with God only by faith (Paul), the ultimate validation of that relationship takes into account the works that true faith must inevitably produce (James).”</li>
+</ul></li>
+<li>Quotes
+<ul class="org-ul">
+<li>Calvin: <span class="underline">Salvation is by faith alone, but by a faith that is not alone</span>
+<ul class="org-ul">
+<li>He writes, “We, indeed, allow that good works are required for righteousness; we only take away from them the power of conferring righteousness, because they cannot stand before the tribunal of God.”</li>
+</ul></li>
+<li>Jeremias
+<ul class="org-ul">
+<li>Paul speaks of Christian faith (trust in Jesus) and Jewish works (obeying the law so as to justify oneself)</li>
+<li>James speaks of Jewish faith (pure monotheism) and Christian works (good deeds that flow from salvation).</li>
+</ul></li>
+<li>Gench:
+<ul class="org-ul">
+<li>Paul deals with obstretics, with how new life beings.</li>
+<li>James deals with peadiatrics and geriartics, with how Christian life grows and matures and ages.</li>
+</ul></li>
+<li>Fung:
+<ul class="org-ul">
+<li>Differentiates between
+<ul class="org-ul">
+<li>forensic justification by faith: legal declaration made by God at the time one commit’s one life to Christ.</li>
+<li>probative justification by works: demonstration by a transformed life that such a commitment was genuine.</li>
+</ul></li>
+</ul></li>
+<li>Witherington
+<ul class="org-ul">
+<li>If we take the vindication in Jas 2:24 as referring to the final verdict of God on one’s deeds and life work, then even Paul can be said to have agreed. He even speaks of a final justification/vindication that is dependent on what believers do in the interim (Gal 5:5–6). This final vindication is in view here. Paul would agree that one cannot be righteous on that last day without having done some good deeds between the new birth and that last day in the spiritual pilgrimage.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org92057cd" class="outline-5">
+<h5 id="org92057cd">Resolution on the use of Gen 15:6 (Abraham believed God, and it was credited to him as righteousness) to support their seemingly opposite view</h5>
+<div class="outline-text-5" id="text-org92057cd">
+<ul class="org-ul">
+<li>Paul: Uses Gen 15:6 to show that Abraham, and people generally, are justified by faith and not by works
+<ul class="org-ul">
+<li>Paul uses the chronological placement of Gen 15:6 as evidence that Abraham's initial declaration of righteousness was attained solely on the basis of faith.</li>
+<li>Appeals to Gen 15:6 to prove that Abraham's faith <i>was credited</i> to him for righteousness, <i>before</i> he had done works, <i>before</i> he was circumcised.</li>
+</ul></li>
+<li>James: Uses Gen 15:6 as a descriptor of Abraham's life as a whole
+<ul class="org-ul">
+<li>James' use of Gen 15:6 does not focus on the <i>timing</i>, but the <i>fact</i> of the declaration of righteousness. Thus, the concern of Paul (that Abraham was declared righteous before he had done works) is not central to James. Rather, James uses Gen 15:6 as a description of Abraham's life generally. The sequence of Gen 15 followed by Gen 22 then suggests that Abraham's faith (15:6) found its ultimate significance and meaning in Abraham's life of obedience (Gen 22). In other words, Gen 15 finds its fulfillment (ἐπληρώθη ἡ γραφὴ; 2:23) or ultimate significance in Gen 22.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org39ffcb8" class="outline-2">
+<h2 id="org39ffcb8">Outline (3 themes)</h2>
+<div class="outline-text-2" id="text-org39ffcb8">
+</div><div id="outline-container-orgca598d0" class="outline-3">
+<h3 id="orgca598d0">Salutation (1:1)</h3>
+</div>
+<div id="outline-container-orgead5760" class="outline-3">
+<h3 id="orgead5760"><span class="todo TODO">TODO</span> Statement of the 3 key themes (1:2-11)</h3>
+<div class="outline-text-3" id="text-orgead5760">
+<ul class="org-ul">
+<li>Literary device: link words
+<ul class="org-ul">
+<li><i>Greetings</i> (χαίρειν)</li>
+<li>consider it pure <i>joy</i> (χαρὰν)</li>
+<li>testing of faith produce <i>endurance</i></li>
+<li>let <i>endurance</i> have its <i>perfect</i> work</li>
+<li>that you may be <i>perfect</i> &#x2026; not <i>lacking</i> in anything</li>
+<li>if someone <i>lacks</i>, he should <i>ask</i></li>
+<li>he should <i>ask</i> not <i>doubting</i></li>
+<li>he who <i>doubts</i> is like a wave.</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-orgd589498" class="outline-4">
+<h4 id="orgd589498"><i>Testing</i> produces character (1:2–4)</h4>
+<div class="outline-text-4" id="text-orgd589498">
+<p class="verse">
+1:2 Consider it pure joy (πᾶσαν χαρὰν), my brothers and sisters, whenever you face trials (πειρασμός) of many kinds (ποικίλος), 3 because you know (γινώσκοντες) that the testing of your faith (τὸ δοκίμιον ὑμῶν τῆς πίστεως) produces perseverance (κατεργάζεται ὑπομονήν). 4 Let (ἐχέτω) perseverance (ἡ ὑπομονὴ) finish its work (ἔργον τέλειον) so that you may be mature and complete (τέλειοι καὶ ὁλόκληροι), not lacking anything (ἐν μηδενὶ λειπόμενοι).<br />
+</p>
+
+<ul class="org-ul">
+<li>Paul and James
+<ul class="org-ul">
+<li>Both agree that testing is good because it brings endurance (Rom 5:3–4).
+<dl class="org-dl">
+<dt>James</dt><dd>testing -&gt; endurance -&gt; maturity/wholeness … wisdom.
+<ul class="org-ul">
+<li>Note that James (except for the unlikely exception of 4:5) never speaks of Holy Spirit.</li>
+</ul></dd>
+<dt>Paul</dt><dd>testing -&gt; endurance -&gt; character -&gt; hope … Holy Spirit</dd>
+</dl></li>
+</ul></li>
+</ul>
+
+<ul class="org-ul">
+<li>Why don’t we consider it pure joy when we encounter various trials?
+<ul class="org-ul">
+<li>Because we don’t want maturity.</li>
+<li>Hudson Taylor: crisis can push you towards God or push you away from God.</li>
+</ul></li>
+<li>How can you consider trials to be joyful?
+<ul class="org-ul">
+<li>Cognitive approach to emotions.</li>
+<li>Reframing our present situation of difficulties into the possibility of spiritual growth
+<ul class="org-ul">
+<li>Reframing exercise: Connecting 9 dots in a box with 4 straight lines without taking off your pen</li>
+</ul></li>
+</ul></li>
+<li>trials:
+<ul class="org-ul">
+<li>test | temptation</li>
+<li>Sometimes, the meaning is not clear
+<ul class="org-ul">
+<li>“Do not lead us into temptation/trials” (Lord’s prayer).</li>
+<li>The word may have both these nuances, in that the external trial is at the same time a point of temptation</li>
+</ul></li>
+<li>Here, the meaning is “trials” or “testing.”</li>
+</ul></li>
+<li>"the testing of your faith produces perseverance"
+<ul class="org-ul">
+<li>James Fraser, “Faith is like a muscle that needs to be exercised.”</li>
+<li>Perseverance:
+<ul class="org-ul">
+<li>Not a passive virtue, but an active steady clinging to the truth within any situation. The Greek term has a more active character than the English word “patience,” which connotes passivity.</li>
+<li>We usually think of endurance or patience as letting others walk over us; but here, it is engaged waiting.</li>
+<li>The outside actions between passive and active waiting is the same; what’s different is the attitude/perspective we have of the situation (Lau).</li>
+<li>Patienly enduring whatever comes without allowing distress to influence one’s conviction.</li>
+</ul></li>
+</ul></li>
+<li>"mature": mature | perfect</li>
+<li>"not lacking anything":
+<ul class="org-ul">
+<li>Not lack in the variety of virtues that define godly character</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org18276bd" class="outline-4">
+<h4 id="org18276bd"><i>Wisdom</i> through prayer (1:5–8)</h4>
+<div class="outline-text-4" id="text-org18276bd">
+<p class="verse">
+1:5 If any of you lacks wisdom (λείπεται σοφίας), you should ask God, who gives generously (ἁπλῶς) to all without finding fault, and it will be given to you. 6 But when you ask, you must believe and not doubt (ἐν πίστει μηδὲν διακρινόμενος), because the one who doubts is like a wave of the sea, blown and tossed by the wind. 7 That person should not expect to receive anything from the Lord. 8 Such a person is double-minded (δίψυχος) and unstable (ἀκατάστατος) in all they do.<br />
+</p>
+
+<ul class="org-ul">
+<li>lacks wisdom (λείπεται σοφίας): 
+<ul class="org-ul">
+<li>wisdom: Means by which the godly discern and carry out the will of God.
+<ul class="org-ul">
+<li>Generally, it is skill at life, particularly the ability to make sound judgments and speak the right words. The wisdom of James is not skill in life, but the divinely given ability to live in a godly way (see Jas 3) and to endure testing. It is not the wisdom of earthly success; it is the wisdom tied up with the ability to live the life of faith (BECNT).</li>
+<li>In later OT and Jewish wisdom literature, wisdom is sometimes hypostatized almost as though it were a person (a process begun in Prov 8:22–31). In Sir 24, it is almost identified with God’s Spirit, and at times James seems virtually to speak of wisdom the way that Paul would speak of God’s Spirit (BECNT).</li>
+</ul></li>
+</ul></li>
+<li>who gives generously
+<ul class="org-ul">
+<li>The fact that wisdom is given does not mean that human activity is not uninvolved. We look to God for our daily bread, but daily bread is also linked to work. As there is a link between working and having bread, there is a link between struggling to understand and obtaining wisdom. But this does not alter the fact that wisdom is a gift (BECNT).</li>
+</ul></li>
+<li>you must believe and not doubt
+<ul class="org-ul">
+<li>Doubt can be misunderstood, because in English parlance it means any uncertainty or questioning. But James does not mean never have a measure of uncertainty regarding whether something is God’s will; rather he is condemning a lack of commitment, a divided loyalty, or an indecision or hesitancy that questions the integrity of God. Thus, the command “to doubt nothing” does not mean that one should believe everything anyone says; it means that one should in no way hold back from commitment or divide one’s loyalties. James tells his readers they must wholeheartedly and single-mindely trust his character and promises. (BECNT)</li>
+<li>Doubt: 
+<ul class="org-ul">
+<li>The doubt that we are to avoid is not uncertainty about the <i>contents</i> of his will. The precise contents are often unknown to us. The true prayer of faith (5:15) is by definition the one that acknowledges “if the Lord wills” (4:15). The doubt we must banish is that which questions whether God is the one to whom we are ultimately loyal, to whom we pledge allegiance.</li>
+<li>It doesn’t mean that we never question what God gives them; rather, we should not doubt the character of God as one who gives generously. See Acts 2:12; Mark 9:24. (ZECNT)</li>
+<li>The problem is not the amount of confidence the petitioner has when he utters his prayer. Rather, the person does not have confidence in the nature of God generally. This is contra the “name-it-and-claim-it” heresy.</li>
+</ul></li>
+<li>Moo
+<ul class="org-ul">
+<li>The word διακρίνω in the middle sense (dispute with oneself) probably refers to a basic division within the believer that brings about wavering and inconsistency of attitude towards God.The word διακρίνω was used of Abraham. Paul says that he “did not waver through unbelief regarding the promise of God.” But Abraham did waver once, greeting God’s promise about his son with laughter (Gen 17:15–18). Paul’s point is not that Abraham never ever doubted, but that he displayed over many years a consistency in his faith in God.</li>
+<li>Similarly, James is not claiming that prayers will never be answered when any degree of doubt exists—for some degree of doubt is almost inevitable in our present state of weakness. Rather, he wants us to know that God responds to our prayers when our lives reflect a basic consistency of purpose and intent: a spiritual integrity.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org701f1ac" class="outline-4">
+<h4 id="org701f1ac"><i>Riches and Poverty</i> (1:9–11)</h4>
+<div class="outline-text-4" id="text-org701f1ac">
+<p class="verse">
+1:9 Believers in humble circumstances (ὁ ταπεινὸς) ought to take pride in their high position (ἐν τῷ ὕψει αὐτοῦ). 10 But the rich should take pride in their humiliation—since (ὅτι) they will pass away like a wild flower (ὡς ἄνθος χόρτου παρελεύσεται). 11 For the sun rises with scorching heat and withers the plant; its blossom falls and its beauty is destroyed. In the same way (οὕτως), the rich will fade away (μαρανθήσεται) even while they go about their business.<br />
+</p>
+
+<ul class="org-ul">
+<li>Who is the rich person?
+<ul class="org-ul">
+<li>Christian: James is exhorting the brother not to take pride in his wealth but in his identification with Christ—that which would be in a low position in the world’s eyes.
+<ul class="org-ul">
+<li>Reason for rich Christian: The rich (ὁ πλούσιος) seems to an adjectival modifier like the poor (ὁ ταπεινὸς). Thus, the rich here is a Christian.</li>
+</ul></li>
+<li>Non-Christian: James uses scornful irony. Go ahead and boast. All you have to boast about is the eschatological humiliation that is coming to you in the judgment—the condemnation. Reasons:
+<ul class="org-ul">
+<li>James is influenced by biblical tradition that associates the godly person with humble circumstances. This antithesis is seen in Jesus who pronounces a blessing on the poor but utters a woe on the rich (Luke 6:23–24). Note also that it is poor Lazarus who finds blessings in the afterlife, but not the rich man (Luke 16:19–31). Thus, some consider the rich here to be a non-Christian.</li>
+<li>Moreover, James mentions “rich” people in 2 other paragraphs, and both present them as wicked oppressors of God’s people. 
+<ul class="org-ul">
+<li>James later states that it is the poor in worldly things who are heirs of the kingdom (2:5) and the rich appear in the role of enemies (2:6), who even blaspheme the name of Christ and are fat for slaughter because they oppress the poor (5:1–6).</li>
+</ul></li>
+</ul></li>
+<li>Not clear, but I lean towards “Christian” since the irony needed for the “non-Christian” interpretation is not that clear (Moo).
+<ul class="org-ul">
+<li>Thus, James exhorts both poor and rich believers to look at their spiritual identity as the measure of their ultimate significance.
+<ul class="org-ul">
+<li>The poor believer, tempted to feel insignificant and powerless by a world that values power, should take pride in their exalted status in the heavenly realm as one seated with Christ in the heavenlies.</li>
+<li>The rich believer, tempted to think too much of themselves because the world holds them in high regard, should not take pride in money or social status. These are doomed to fade away forever. Rather, they should take pride in their humble status as those who identify themselves with one who was despised and rejected by the world.</li>
+<li>Both the poor and the rich are to take pride in their identity with Christ. But their identity in Christ is seen from different perspectives. For the poor, Christ is the exalted Lord from God’s perspective; thus, the poor can take pride in their high position. For the rich, Christ is the one who was despised and rejected from the world’s perspective; thus, the rich are to take pride in their humiliation.</li>
+</ul></li>
+<li>Main point: The Christian must always evaluate themselves by spiritual and not material standards.</li>
+</ul></li>
+</ul></li>
+<li>What’s our response to James’ teaching?
+<ul class="org-ul">
+<li>Divest ourselves of as much material prosperity as we can manage.</li>
+<li>Ignore James?</li>
+</ul></li>
+<li>Dangers of wealth	
+<ul class="org-ul">
+<li>Wealth leads the wealthy to arrogance, pride, and ruthlessness, to faith in themselves rather than to God.</li>
+<li>Wealth can lead the poor to envy, sycophancy, and obsequiousness.</li>
+<li>But it is not wealth per se. It is the rich person’s attachment to wealth and the poor person’s lust for it.</li>
+<li>Thus, wealthy people are to remember the transitory nature of wealth. They are not to get attached to it, not to place confidence in it, not to put their identity in it, and not to put themselves above others. Their one reason for glory is the same as that of the poor: they know, and are known by, a gracious God (Jer 9:23-24).
+<ul class="org-ul">
+<li>23 This is what the LORD says: “Let not the wise boast of their wisdom or the strong boast of their strength or the rich boast of their riches, 24 but let the one who boasts boast about this: that they have the understanding to know me, that I am the LORD, who exercises kindness, justice and righteousness on earth, for in these I delight,” declares the LORD.</li>
+</ul></li>
+</ul></li>
+<li>"the rich should take pride in their humiliation"
+<ul class="org-ul">
+<li>Non-Christian: Ironical, the rich should boast in their final judgment.</li>
+<li>Christian: their humiliation comes in acknowledging their dependence on Christ rather than on mammon.</li>
+</ul></li>
+<li>"For the sun rises with scorching heat and withers the plant; its blossom falls and its beauty is destroyed. In the same way, the rich will fade away even while they go about their business"
+<ul class="org-ul">
+<li>Echoes "What is your life? You are a mist that appears for a little while and then vanishes" (4:14).</li>
+<li>Illustration: Hotel New World</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgef8415e" class="outline-3">
+<h3 id="orgef8415e">Restatement of the 3 key themes (1:12-27)</h3>
+<div class="outline-text-3" id="text-orgef8415e">
+</div><div id="outline-container-orga5e8db6" class="outline-4">
+<h4 id="orga5e8db6">The potential that <i>testing</i> brings (1:12–18)</h4>
+</div>
+<div id="outline-container-orgb892dc1" class="outline-4">
+<h4 id="orgb892dc1"><i>Wisdom</i> in speech (1:19–21)</h4>
+<div class="outline-text-4" id="text-orgb892dc1">
+<ul class="org-ul">
+<li>Pure speech comes from wisdom, cf. 3:13-18</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6f3e35d" class="outline-4">
+<h4 id="org6f3e35d">Obedience in <i>generosity</i> (charitable works) (1:22–25)</h4>
+</div>
+<div id="outline-container-orgd559d29" class="outline-4">
+<h4 id="orgd559d29">[Summary and Transition] (1:26–27)</h4>
+</div>
+</div>
+<div id="outline-container-org249ba82" class="outline-3">
+<h3 id="org249ba82">Expansion of 3 key themes in reverse order (2:1–5:6)</h3>
+<div class="outline-text-3" id="text-org249ba82">
+</div><div id="outline-container-org348b2fb" class="outline-4">
+<h4 id="org348b2fb">Excellence of <i>poverty and generosity</i> (2:1–26)</h4>
+<div class="outline-text-4" id="text-org348b2fb">
+</div><div id="outline-container-org7c9fe2b" class="outline-5">
+<h5 id="org7c9fe2b"><span class="todo TODO">TODO</span> No partiality allowed (2:1–13)</h5>
+<div class="outline-text-5" id="text-org7c9fe2b">
+<ul class="org-ul">
+<li>Background
+<ul class="org-ul">
+<li>Judicial assembly</li>
+<li>*Worship meeting</li>
+</ul></li>
+</ul>
+
+<ul class="org-ul">
+<li>Background
+<ul class="org-ul">
+<li>The space that James devotes to this issue indicates that it was a problem among his readers.</li>
+<li>Difficulty: What was the actual problem and the situation? 
+<ul class="org-ul">
+<li>2:2–3 could fit 2 different situations
+<ul class="org-ul">
+<li>*Worship meeting: 
+<ul class="org-ul">
+<li>Weekly worship gathering of the Christian community where the “ushers,” with tacit approval from the leaders, give the best seats to the rich and ask the poor to sit on the floor.</li>
+<li>If this is a worship meeting, would they need to be told where to go? 
+<ul class="org-ul">
+<li>The rich and poor are not Christians but interested visistors.</li>
+</ul></li>
+</ul></li>
+<li>Judicial assembly: (ZECNT)
+<ul class="org-ul">
+<li>Evidence: 
+<ul class="org-ul">
+<li>legal language (προσωπολημψία, 2:1; διεκρίθητε, κριταί; 2:4).</li>
+<li>V. 6 also introduce the comparison with rich persons dragging the poor Christians into court.”</li>
+<li>Language of Lev 19:15 supports legal setting. (“Do not pervert justice; do not show partiality to the poor or favoritism to the great, but judge your neighbor fairly”)</li>
+</ul></li>
+<li>Meeting of a Christian assembly to judge the dispute between two of its members. James does not describe the situation with typical language of early Christian worship meetings, and he accuses them of becoming “judges with evil thoughts” (2:4). If so, this kind of informal Christian legal proceeding is what Paul recommends to the Corinthians in 1 Cor 6:1–8.</li>
+</ul></li>
+</ul></li>
+<li>Hypothetical situation, such language used in 2:2–3 | *actual situation, suggested by “you have insulted the poor” (2:6)</li>
+</ul></li>
+</ul></li>
+<li>Application: 
+<ul class="org-ul">
+<li>Social structures are brought into the fabric of the church.
+<ul class="org-ul">
+<li>Discrimination: race, gender, sexual orientation.</li>
+<li>India: Dalit.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-orgb749eb3" class="outline-6">
+<h6 id="orgb749eb3">Thesis (2:1)</h6>
+<div class="outline-text-6" id="text-orgb749eb3">
+<p class="verse">
+2:1 My brothers and sisters, believers in our glorious Lord Jesus Christ must not show favoritism (προσωπολημψία).<br />
+</p>
+
+<ul class="org-ul">
+<li>προσωπολημψία:
+<ul class="org-ul">
+<li>From λαμβάνειν πρόσωπον (LXX used to translate Heb, to raise the face).</li>
+<li>“to receive the face,” make judgments based on external appearance. James apply it to dress. Note that this is plural in the Greek, suggesting its wide-ranging application—dress, skin, or general physical appearance.</li>
+</ul></li>
+<li>James’ language (ἐν προσωπολημψίαις ἔχετε τὴν πίστιν …) shows that discrimination against people is inconsistent with true faith in Christ.</li>
+<li>Ethics for James is largely a matter of imitatio Dei, (e.g. Matt 5:48). Thus, faith in Jesus Christ will necessarily eventuate in a reflection of the character of Jesus Christ.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org19b921c" class="outline-6">
+<h6 id="org19b921c">Example with conclusion (2:2-4)</h6>
+<div class="outline-text-6" id="text-org19b921c">
+<p class="verse">
+2:2 Suppose (ἐάν) a man comes into your meeting (εἰς συναγωγὴν ὑμῶν) wearing a gold ring and fine clothes (ἐν ἐσθῆτι λαμπρᾷ), and a poor man in filthy old clothes (ἐν ῥυπαρᾷ ἐσθῆτι) also comes in. 3 If you show special attention (ἐπιβλέψητε) to the man wearing fine clothes and say, “Here’s a good seat for you (σὺ κάθου ὧδε καλῶς,),” but say to the poor man, “You stand there (σὺ στῆθι ἐκεῖ)” or “Sit on the floor by my feet (κάθου ὑπὸ τὸ ὑποπόδιόν μου),” 4 have you not discriminated (διεκρίθητε) among yourselves and become judges with evil thoughts (ἐγένεσθε κριταὶ διαλογισμῶν πονηρῶν)?<br />
+</p>
+
+<ul class="org-ul">
+<li>"filthy old clothes": conjures up typical homeless person today: mismatched, stained, smelly rags</li>
+<li>"you stand there &#x2026; or Sit on the floor by my feet":
+<ul class="org-ul">
+<li>Not wanting the poor to be there, or allowing the poor to be there only as long as they know their place.</li>
+</ul></li>
+<li>"discriminated (διεκρίθητε) among yourselves"
+<ul class="org-ul">
+<li>Same word as "doubt, waver" in 1:6</li>
+<li>Common concept behind both “discriminate” and “doubt” is that of making a distinction.
+<ul class="org-ul">
+<li>Doubt: Wondering if God can be trusted.</li>
+<li>Discriminate: Making distinctions based on socio-economic factors</li>
+<li>They are always calculating, trying to find the optimal benefit for them.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org92308f9" class="outline-6">
+<h6 id="org92308f9">3 reasons against partiality (2:5–11)</h6>
+<div class="outline-text-6" id="text-org92308f9">
+<p class="verse">
+2:5 Listen, my dear brothers and sisters: Has not God chosen those who are poor in the eyes of the world to be rich in faith (ἐξελέξατο τοὺς πτωχοὺς τῷ κόσμῳ πλουσίους ἐν πίστει) and to inherit the kingdom (κληρονόμους τῆς βασιλείας) he promised those who love him (ἐπηγγείλατο τοῖς ἀγαπῶσιν αὐτόν)? 6 But you have dishonored the poor.<br />
+<br />
+6b Is it not the rich who are exploiting you? Are they not the ones who are dragging you into court? 7 Are they not the ones who are blaspheming (βλασφημοῦσιν) the noble name of him to whom you belong (τὸ καλὸν ὄνομα τὸ ἐπικληθὲν ἐφʼ ὑμᾶς)?<br />
+<br />
+8 If you really keep the royal law found in Scripture (εἰ μέντοι νόμον τελεῖτε βασιλικὸν κατὰ τὴν γραφήν), “Love your neighbor as yourself,” (Lev 19:18) you are doing right. 9 But if you show favoritism (εἰ δὲ προσωπολημπτεῖτε), you sin and are convicted by the law as lawbreakers.<br />
+10 For whoever keeps the whole law (ὅστις γὰρ ὅλον τὸν νόμον τηρήσῃ) and yet stumbles at just one point is guilty of breaking all of it. 11 For he who said (ὁ γὰρ εἰπών), “You shall not commit adultery,” (Ex 20:14; Dt 5:18) also said, “You shall not murder.” (Ex 20:13; Dt 5:17) If you do not commit adultery but do commit murder, you have become a lawbreaker.<br />
+</p>
+
+<ol class="org-ol">
+<li>Theological: Poor, rather than rich, more often become believers (5-6a)</li>
+<li>Pragmatic: The rich are the very class that is persecuting James' churches (6b-7)</li>
+<li>Violates law of love: Claim to love one's neighbor is hollow if they discriminate (8-11)</li>
+</ol>
+
+<ul class="org-ul">
+<li>Poor: both material and spiritual sense.
+<ul class="org-ul">
+<li>Antonym would be "rich" (material sense) + "wicked" (spiritual sense)</li>
+<li>How broad should James’ assertion be, that God has chosen the poor in the eyes of the world to be rich in faith?
+<ul class="org-ul">
+<li>Liberation theologians take a very broad interpretation: God chooses only poor people for salvation; wealthy people are excluded. But  … 
+<ul class="org-ul">
+<li>this interpretation ignores many NT passages, and also Jas 1:10–11 that includes wealthy people in the church.</li>
+<li>it adds as a word “only,” which James himself does not include. James writes to a community that comprises primarily of poor people. For them, it was evident that God chose poor people to be saved. But to infer from the positive assertion about poor people to a negative assertion about rich people is unwarranted.</li>
+</ul></li>
+<li>The poor have lots of practice in relying on God and thus often have a deeper knowledge of God than those who are not so poor.</li>
+</ul></li>
+</ul></li>
+<li>royal law
+<ul class="org-ul">
+<li>Torah as fulfilled and expanded by Christ
+<ul class="org-ul">
+<li>Law pertaining to the kingdom of God, with βασιλικόν recalling βασιλεία in 2:5. This then is the sum total of demands that God, through Jesus, imposes on believers: “the whole law as interpreted and handed over to the church in the teaching of Jesus” (Davids). The royal law extends beyond the Mosaic law as fulfilled and reinterpreted by Jesus to include the teaching of Jesus.</li>
+<li>Royal law (2:8) and the “law of liberty” of 2:12 hark back to the perfect law of liberty in 1:25.</li>
+<li>Refers also to the renewed covenant of Jer 31:31–34.</li>
+<li>Implication: They must love their neighbor (i.e. including the poorest people who can offer them nothing) as themselves.</li>
+</ul></li>
+</ul></li>
+<li>Examples of what it means to show partiality?
+<ul class="org-ul">
+<li>Frequent customer at a restaurant has certain privileges: having a private room.</li>
+<li>Frequent flyer program.
+<ul class="org-ul">
+<li>Priority check in.</li>
+<li>American Express: Membership has its privileges.</li>
+</ul></li>
+<li>Examples of partiality in business:
+<ul class="org-ul">
+<li>Nepotism: Hiring family members regardless of their qualifications.</li>
+<li>Cronyism: Hiring friends regardless of qualifications.</li>
+<li>Gifts and entertainment: 
+<ul class="org-ul">
+<li>Associates may not benefit personally from company business with suppliers or others or derive personal gain from transactions made on behalf of the company.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb546611" class="outline-6">
+<h6 id="orgb546611">Conclusion (2:12-13)</h6>
+<div class="outline-text-6" id="text-orgb546611">
+<p class="verse">
+2:12 Speak and act as those who are going to be judged by the law that gives freedom (Οὕτως λαλεῖτε καὶ οὕτως ποιεῖτε ὡς διὰ νόμου ἐλευθερίας μέλλοντες κρίνεσθαι), 13 because judgment without mercy will be shown to anyone who has not been merciful. Mercy triumphs over judgment (κατακαυχᾶται ἔλεος κρίσεως).<br />
+</p>
+
+<ul class="org-ul">
+<li>law that gives freedom:
+<ul class="org-ul">
+<li>law: Not the OT law, but the OT as reinterpreted and imposed by Christ on his followers.</li>
+<li>freedom: The law is no longer a burden, but an obligation we discharge in the joyful knowledge that God has liberated us from the penalty of sin, and given us the power to obey it in his Spirit.
+<ul class="org-ul">
+<li>See note also on 1:25.</li>
+<li>The law is most liberating as it shows us how to be most human.</li>
+<li>ZECNT argues that we have here the clearest indication that there are 2 different laws under discussion in this passage: the “law that gives freedom” and the law that only condemns (vv. 10-11). If one lives according to Torah, one is doomed to failure, because one can never keep all of it. Rather, one is to live according to the new law or covenant that Christ creates by fulfilling and suplementing Torah, and according to the freedom it brings.</li>
+<li>Genitive: descriptive (ZECNT; a liberating law) | *product | *a law that is marked by freedom (Lau)</li>
+<li>Questions:
+<ul class="org-ul">
+<li>Freedom: What kind of freedom; freedom as to how we were meant to live. Freedom from economic oppression?</li>
+<li>Judged: positive or negative; perhaps evaluated (Lau).</li>
+</ul></li>
+</ul></li>
+<li>Previously: perfect law (1:25), royal law (2:8); law of freedom (1:25). They are not 3 different laws, but the law of God is complete, kingly, and liberating.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbd809d3" class="outline-5">
+<h5 id="orgbd809d3"><span class="todo TODO">TODO</span> Generosity is necessary, but fundamental issue is the relationship between faith and works (2:14–26)</h5>
+<div class="outline-text-5" id="text-orgbd809d3">
+<ul class="org-ul">
+<li>The fundamental corollary of 1-13 is James' insistence that faith without works is dead. This principle is again illustrated by the refusal of some so-called Christians to offer even the slightest help to the most destitute in their midst (14-17).</li>
+</ul>
+</div>
+<div id="outline-container-org8bd7eec" class="outline-6">
+<h6 id="org8bd7eec">Introduction of topic: Faith without works cannot save (2:14)</h6>
+<div class="outline-text-6" id="text-org8bd7eec">
+<p class="verse">
+2:14 What good is it (τί τὸ ὄφελος), my brothers and sisters, if someone claims to have faith but has no deeds (ἔργα)? Can such faith save them (μὴ δύναται ἡ πίστις σῶσαι αὐτόν)?<br />
+</p>
+
+<ul class="org-ul">
+<li>"claims": claim to faith is not the same as having faith</li>
+<li>"deeds": same word as Paul's "works." But NIV translates it this way to reduce confusion with Paul's teaching about "works of the law."</li>
+<li>"save him": from eschatological judgment</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org21a4263" class="outline-6">
+<h6 id="org21a4263">Illustration (2:15–16)</h6>
+<div class="outline-text-6" id="text-org21a4263">
+<p class="verse">
+2:15 Suppose (ἐάν) a brother or a sister is without clothes (γυμνοὶ) and daily food (τῆς ἐφημέρου τροφῆς). 16 If one of you says to them, “Go in peace; keep warm and well fed (θερμαίνεσθε καὶ χορτάζεσθε),” but does nothing about their physical needs, what good is it (τί τὸ ὄφελος)?<br />
+</p>
+<ul class="org-ul">
+<li>Go in peace</li>
+<li>keep warm and well fed: middle | passive
+<ul class="org-ul">
+<li>Indictment of our "I'll pray for you" but do nothing about it.</li>
+</ul></li>
+</ul>
+
+<ul class="org-ul">
+<li>Go in peace: Well-being and blessing that comes from God. What is reprehensible is the use of religious language as a cover for the failure to act.</li>
+<li>Keep warm and well fed:
+<ul class="org-ul">
+<li>middle (keep warm, eat well) | *passive (conveys the wish for God to clothe and feed destitute fellow believers without acknowledging one’s own responsibility in the matter)
+<ul class="org-ul">
+<li>If middle, the insult to the poor person becomes more outrageous.</li>
+<li>If passive, we commit this person to God with a prayer, sending them away with expressions of confidence.</li>
+</ul></li>
+</ul></li>
+<li>However well-meaning the above words ("Go in peace; keep warm and well fed") might be, they have not helped the needy people. At the same time, it also raises questions about the spiritual state of one who fails to act, alluding to the Sheep and Goats, “For I was hungry … thirsty … stranger … needed clothes … sick and in prison” (Matt 25:42–43).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb9fa248" class="outline-6">
+<h6 id="orgb9fa248">Implication of illustration: "Faith by itself, if it is not accompanied by action, is dead" (2:17)</h6>
+<div class="outline-text-6" id="text-orgb9fa248">
+<p class="verse">
+2:17 In the same way (οὕτως), faith by itself (καθʼ ἑαυτήν), if it is not accompanied by action (ἔργα), is dead (νεκρά).<br />
+</p>
+<ul class="org-ul">
+<li>καθʼ ἑαυτήν: by itself | *in itself</li>
+</ul>
+
+<ul class="org-ul">
+<li>James is not really contrasting faith and works as if there are 2 alternatives of approaching God. Rather, he is “contrasting a faith that, because it is inherently defective, produces no works and a faith that, because it is genuine, does result in action.”</li>
+<li>"In the same way": Introduces moral of the illustration. It suggests that 2:15–16 has 2 functions. (1) Concrete illustration of unconcern for the poor; (2) Illustration of the theological point that is the real argument at this point.</li>
+<li>"Faith by/in itself":
+<ul class="org-ul">
+<li>"Faith in itself" is preferred. James does not say that works must be added to faith. Rather, such faith in itself is not genuine faith.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc80abe4" class="outline-6">
+<h6 id="orgc80abe4">Objection and Response (2:18–26)</h6>
+<div class="outline-text-6" id="text-orgc80abe4">
+</div><div id="outline-container-orgc8fbc0b" class="outline-7">
+<h7 id="orgc8fbc0b">Interlocutor: Faith and deeds are separable (2:18a)</h7>
+<div class="outline-text-7" id="text-orgc8fbc0b">
+<p class="verse">
+2:18 But someone will say, “You have faith; I have deeds.”<br />
+</p>
+<ul class="org-ul">
+<li>Difficulty
+<ul class="org-ul">
+<li>Expected question and response:
+<ul class="org-ul">
+<li>Interlocutor: “You have <del>faith</del> works, but I have <del>deeds</del> faith.”</li>
+<li>James: “Show me your [so-called] faith without works, and I will show you [genuine] faith by means of my works.”</li>
+</ul></li>
+</ul></li>
+<li>You &#x2026; I</li>
+</ul>
+
+<ul class="org-ul">
+<li>Difficulty:
+<ul class="org-ul">
+<li>Where does the quotation end?</li>
+<li>We expect the following statement from the interlocutor.
+<ul class="org-ul">
+<li>Objector: "You have <del>faith</del> works, but I have <del>deeds</del> faith"</li>
+</ul></li>
+</ul></li>
+<li>You &#x2026; I
+<ul class="org-ul">
+<li>The “you” and “I” are 2 generic positions: one chooses faith; another chooses works. The objector’s point is that faith and works are separate entities. How then can James demand that all Christians possess both faith and works? To this, James responds that neither is an option. Genuine saving faith is present only where works are seen. He argues for the inseparability of faith and works.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5cfe90b" class="outline-7">
+<h7 id="org5cfe90b">James: Faith can only be shown by deeds (2:18b–19)</h7>
+<div class="outline-text-7" id="text-org5cfe90b">
+<p class="verse">
+2:18b Show (δεῖξόν) me your faith without deeds, and I will show you my faith by my deeds. 19 You believe that there is one God (εἷς ἐστιν ὁ θεός). Good! Even the demons believe that—and shudder.<br />
+</p>
+<ul class="org-ul">
+<li>James reacts to 2 misconceptions
+<ul class="org-ul">
+<li>Faith is opposed to works (i.e., there are 2 ways of approaching God, by faith or works) (18)</li>
+<li>Faith consists solely in believing certain doctrines (19)</li>
+</ul></li>
+<li>God is one:</li>
+<li>shudder:</li>
+</ul>
+
+<ul class="org-ul">
+<li>James reacts to 2 misconceptions
+<ul class="org-ul">
+<li>Faith is opposed to works (i.e., there are 2 ways of approaching God, by faith or works) (18)
+<ul class="org-ul">
+<li>"Show": "Prove/demonstrate" rather than "make visible."
+<ul class="org-ul">
+<li>James: He does not challenge his objector to reveal faith by actions, but to prove that he has faith by what he does. This again shows the inseparability of faith and works.</li>
+<li>One cannot show faith by any means other than works, and thus faith and works cannot be separated.</li>
+</ul></li>
+</ul></li>
+<li>Faith consists solely in believing certain doctrines (19)
+<ul class="org-ul">
+<li>James: Faith is not just mental assent.</li>
+</ul></li>
+</ul></li>
+<li>God is one:
+<ul class="org-ul">
+<li>The problem lies not with the confession itself, but that it does not go beyond the verbal to touch the heart and the life.</li>
+</ul></li>
+<li>shudder
+<ul class="org-ul">
+<li>Believing <i>that</i> there is one God (intellectual assent) is different from believing <i>in</i> the God who is one.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3640495" class="outline-7">
+<h7 id="org3640495">James: Faith without deeds is useless (2:20–25)</h7>
+<div class="outline-text-7" id="text-org3640495">
+</div><div id="outline-container-org816025c" class="outline-8">
+<h8 id="org816025c">Statement: Faith without deeds is useless (2:20)</h8>
+<div class="outline-text-8" id="text-org816025c">
+<p class="verse">
+2:20 You foolish person (ὦ ἄνθρωπε κενέ), do you want evidence (θέλεις &#x2026; γνῶναι) that faith without deeds (χωρὶς τῶν ἔργων) is useless (ἀργή)?<br />
+</p>
+<ul class="org-ul">
+<li>"You foolish person": interlocutor</li>
+<li>"useless": Note the word play with ἔργα. Such faith is “non-working,” i.e. useless or dead.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga38f34e" class="outline-8">
+<h8 id="orga38f34e">Example of Abraham: a faith that works (2:21-23)</h8>
+<div class="outline-text-8" id="text-orga38f34e">
+<p class="verse">
+2:21  Was not our father Abraham considered righteous for what he did (ἐξ ἔργων ἐδικαιώθη) when he offered (ἀνενέγκας) his son Isaac on the altar (Gen 22)? 22 You see that his faith and his actions were working together (ἡ πίστις συνήργει τοῖς ἔργοις αὐτοῦ), and his faith was made complete by what he did (ἐκ τῶν ἔργων ἡ πίστις ἐτελειώθη). 23 And (καί) the scripture was fulfilled (ἐπληρώθη) that says, “Abraham believed God, and it was credited to him as righteousness,” (Gen 15:6) and he was called God’s friend.<br />
+</p>
+
+<ul class="org-ul">
+<li>considered righteous for what he did (ἐξ ἔργων ἐδικαιώθη):</li>
+<li>his faith was made complete by what he did (ἐκ τῶν ἔργων ἡ πίστις ἐτελειώθη):
+<ul class="org-ul">
+<li>τελειόω + ἐκ is not found anywhere else in the NT.</li>
+<li>1 John 4:12 “If we love one another, God lives in us and his love is made complete in us (ἡ ἀγάπη αὐτοῦ ἐν ἡμῖν τετελειωμένη ἐστίν).”
+<ul class="org-ul">
+<li>Reach its intended goal</li>
+</ul></li>
+</ul></li>
+<li>Scripture was fulfilled (ἐπληρώθη):
+<ul class="org-ul">
+<li>Brought to its ultimate significance</li>
+</ul></li>
+</ul>
+
+<ul class="org-ul">
+<li>James now appeals to the OT to show a faith that works. Reference is to Abraham’s testing (Gen 22).
+<ul class="org-ul">
+<li>James’ concern:
+<ul class="org-ul">
+<li>To distinguish between an ineffective and effective faith. Faith without works is not viable and effective, and faith therefore needs works in order for it to be viable and effective.</li>
+</ul></li>
+<li>Paul's concern:
+<ul class="org-ul">
+<li>One’s legal standing before the eschatological tribunal of God.
+<ul class="org-ul">
+<li>He is interested in how God can rightly give a verdict of “just” for a sinner” (through union with Christ) and how one appropriates that verdict and union (through faith, not by works of the law).</li>
+</ul></li>
+</ul></li>
+<li>Different concerns between James and Paul
+<ul class="org-ul">
+<li>James is interested in the legitimacy of active faith, over against the emptiness of an inactive faith.</li>
+<li>Thus, James’ concern is different from Paul’s interest in Gal and Rom.</li>
+<li>James’ presentation of Abraham and Rahab’s justification is not to show the process by which a sinful human being can obtain the verdict of righteous; rather, it is a part of the argument to demonstrate that faith cannot be divorced from works. His concern is not the ordo salutis, but consistent Christian behavior.</li>
+</ul></li>
+</ul></li>
+<li>"considered righteous" (δικαιόω):
+<ul class="org-ul">
+<li>Paul typically uses it to denote God’s initial judicial verdict of “innocence” pronounced over the sinner who trusts Jesus Christ in faith. 
+<ul class="org-ul">
+<li>But we cannot assume that James, writing before Paul, uses that word in that way. The use of this verb in the OT, in Judaism, and in the teachings of Jesus show otherwise.</li>
+<li>In Galatians, however, Paul sometimes uses the verb to mean “acquit in the final judgment.”</li>
+</ul></li>
+<li>Options
+<ul class="org-ul">
+<li>*To acquit/vindicate in the final judgment  
+<ul class="org-ul">
+<li>OT: “vindicate in the judgment”: occurs 44x in the LXX, usually in legal settings. 
+<ul class="org-ul">
+<li>In these passages, God is the judge before whom one pleads his case. Here, it is one’s actual conduct that forms the basis for God’s vindication. E.g., Mic 6:11 indicates that God will not acquit (δικαιόω) the man with dishonest scales.</li>
+<li>Here, “men are declared to be in the right on the facts, i.e. because in general or in a specific matter they are upright, and innocent.”</li>
+</ul></li>
+<li>Judaism: maintains the same viewpoint as the OT. 
+<ul class="org-ul">
+<li>a person’s δικαιοσύνη is related to correct conduct, as defined by God’s law, and the verdict of justification was pronounced over those who faithfully observed the covenant stipulations. Matt reflects this Jewish usage. Entrance into the kingdom is dependent on commitment to Jesus (“following Jesus”), but “righteousness” is mainly, if not exclusively, the conduct expected of the disciples (Matt 5:20; Λέγω γὰρ ὑμῖν ὅτι ἐὰν μὴ περισσεύσῃ ὑμῶν ἡ δικαιοσύνη πλεῖον τῶν γραμματέων καὶ Φαρισαίων, οὐ μὴ εἰσέλθητε εἰς τὴν βασιλείαν τῶν οὐρανῶν) and “justify” refers to the verdict pronounced over a person’s life at the last judgment, a verdict based on what a person has done. See Matt 12:37 “For by your words you will be acquitted (ἐκ γὰρ τῶν λόγων σου δικαιωθήσῃ), and by your words you will be condemned (καὶ ἐκ τῶν λόγων σου καταδικασθήσῃ)”</li>
+</ul></li>
+<li>If James uses the verb in this sense, then he is claiming that ultimate vindication of the believer in the judgment is based on, or at least takes into account, the things that person has done. <span class="underline">So, “justify” in Paul refers to how a person gets into relationship with God, while in James it connotes what that relationship must ultimately look like to receive God’s final approval.</span></li>
+<li>James begins his diatribe in 2:14 with the question “Can that (workless) faith save him?”
+<ul class="org-ul">
+<li>Assumption: James contrasts a nonworking inactive faith (which cannot save in the judgment) with a work faith (which can save in the judgment); not because faith itself saves, but because it is the kind of faith that God accepts.</li>
+<li>In this view, Gen 15:6 (God’s pronouncment of Abraham’s faith as his righteousness and which happened many years prior to the binding of Isaac) is not determinative for James, because Gen 15:6 was simply anticipatory of the later obedience.</li>
+</ul></li>
+</ul></li>
+<li>Shown to be right, vindicate (ZECNT)
+<ul class="org-ul">
+<li>E.g. Matt 11:19 “Wisdom is proved right by her actions (καὶ ἐδικαιώθη ἡ σοφία ἀπὸ τῶν ἔργων αὐτῆς).” In other words, the existence and value of wisdom are demonstrated in the actions that arise from it.</li>
+<li>In this reading, James claims that Abraham was “shown to be right” by his actions: his prior acceptance by God (Gen 15:6), the righteousness that he had already attained by faith, was demonstrated in his deeds of obedience.</li>
+<li>This view also finds support if you consider “show” in v. 18 to be “reveal” rather than “prove.”</li>
+<li>This view harmonizes with Paul, but …
+<ul class="org-ul">
+<li>this usage of δικαιόω is rare</li>
+<li>the meaning does not fit the context well since the issue is what constitutes the true religion that will survive the judgment of God (1:21–27; 2:12–13) and what kind of faith will save a person (2:14).</li>
+</ul></li>
+<li>The difference between this option and the previous is in the time frame. The previous is vindication at the final judgment; this is vindication (“demonstration of being right”) in the present.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>his faith was made complete by what he did (ἐκ τῶν ἔργων ἡ πίστις ἐτελειώθη):
+<ul class="org-ul">
+<li>τελειόω + ἐκ is not found anywhere else in the NT.</li>
+<li>1 John 4:12 “If we love one another, God lives in us and his love is made complete in us (ἡ ἀγάπη αὐτοῦ ἐν ἡμῖν τετελειωμένη ἐστίν).”
+<ul class="org-ul">
+<li>Reach its intended goal</li>
+</ul></li>
+</ul></li>
+<li>"Scripture was fulfilled"
+<ul class="org-ul">
+<li>Abraham's faith, in its relationship to righteousness, found its ultimate significance and meaning in Abraham's life of obedience.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdefa58d" class="outline-8">
+<h8 id="orgdefa58d">Conclusion: Justification requires faith and works (2:24)</h8>
+<div class="outline-text-8" id="text-orgdefa58d">
+<p class="verse">
+2:24  You see that a person is considered righteous by what they do (ἐξ ἔργων δικαιοῦται ἄνθρωπος) and not by faith alone (καὶ οὐκ ἐκ πίστεως μόνον).<br />
+</p>
+<ul class="org-ul">
+<li><a href="#org2f810d5">Resolution of the issue on soteriology: synergistic or monergistic</a></li>
+</ul>
+<ul class="org-ul">
+<li>James now draws faith, works, and justification together. This is the center of James’ discussion on faith, works, and justification (2:21–25). 
+<ul class="org-ul">
+<li>Important because James now directly addresses his readers using 2P ὁρᾶτε. In 2:21–23, it has been 2S (θέλεις, v. 20; ὦ ἄνθρωπε κενέ, v20; βλέπεις, v. 22).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf1ad205" class="outline-8">
+<h8 id="orgf1ad205">Example of Rahab: a faith that works (2:25)</h8>
+<div class="outline-text-8" id="text-orgf1ad205">
+<p class="verse">
+2:25 In the same way, was not even Rahab the prostitute considered righteous for what she did when she gave lodging to the spies and sent them off in a different direction?<br />
+</p>
+<ul class="org-ul">
+<li>Note // with Abraham
+<ul class="org-ul">
+<li>2:21 Was not our ancestor Abraham considered righteous for what he did</li>
+<li>2:25 Was not even Rahab the harlot considered righteous for what he did</li>
+<li>2:21 &#x2026; when he offered his son Isaac on the altar?</li>
+<li>2:25 &#x2026; when she gave lodging to the spies and sent them off in a different direction?</li>
+</ul></li>
+</ul>
+
+<ul class="org-ul">
+<li>Why did James choose Rahab? 
+<ul class="org-ul">
+<li>There’s a tradition (found in late first-century Christian writing of 1 Clement) in which both Abraham and Rahab are models of faith and hospitality: Rahab welcomed the 3 spies (τοὺς ἀγγέλους) | Abraham also received the 3 men (“angels”). The faith in both Rahab and Abraham may then contrast with the dead faith of the man in 2:15–16 who refuses to give aid to those in need. But why does James not refer to Gen 18 (the 3 visitors to Abraham)? Moo thinks that it is because James wanted variety. In contrast to a famous and celebrated ancestor, Rahab is an obscure Gentile woman of low moral character. Thus, James implied that anyone is capable of acting on his or her faith—whether a patriarch or a prostitute.</li>
+<li>Difference between Abraham and Rahab
+<ul class="org-ul">
+<li>Abraham: rich, moral, male, father of the Jewish nation, major figure in society</li>
+<li>Rahab: poor, immoral, female, outcast of Canaanite nation, minor figure in society</li>
+<li>Implication: Abraham and Rahab form a merism, so that everyone in between them is included as needing to exhibit transformed living to demonstrate the genuineness of faith.</li>
+</ul></li>
+</ul></li>
+<li>In Heb 11:31, “By faith .. she did not perish with those who were disobedient, because he had received (δεξαμένη) the spies in peace.” Putting Jas 2:25 and Heb 11:31 together, Rahab’s justification is marked by the fact that she is spared.</li>
+<li>James calls the spies "messengers" (τοὺς ἀγγέλους) while Hebrews calls them "spies" (τοὺς κατασκόπους). Is James’ use indicative that these messengers were the means Rahab discovered more about God and his intentions? (BECNT). BECNT also suggests that there is more evidence how the cord // the Exodus passover.</li>
+<li>Issue of Rahab’s lying
+<ul class="org-ul">
+<li>Hierarchical approach to ethics: at times, a more fundamental moral principle must be kept even if it requires disobedience to a more subsidiary one. Here, defending God’s cause was a higher call then responding faithfully to an already doomed regime. 
+<ul class="org-ul">
+<li>Similar to Jesus’ weightier matters of the law (Lau).</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9f0a0f7" class="outline-7">
+<h7 id="org9f0a0f7">James: Faith without deeds is dead (2:26)</h7>
+<div class="outline-text-7" id="text-org9f0a0f7">
+<p class="verse">
+2:26 As the body without the spirit is dead (ὥσπερ γὰρ τὸ σῶμα χωρὶς πνεύματος νεκρόν ἐστιν), so faith without deeds is dead (οὕτως καὶ ἡ πίστις χωρὶς ἔργων νεκρά ἐστιν).<br />
+</p>
+
+<ul class="org-ul">
+<li>The Spirit is the life principle of the body. Just as the body ceases to be without the spirit; so also faith ceases to be without works. James is not arguing that works be added to faith; but that one possesses the right kind of faith, a “faith that works.”</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8d59b3e" class="outline-4">
+<h4 id="org8d59b3e"><i>Wisdom</i> in speech (3:1–4:12)</h4>
+<div class="outline-text-4" id="text-org8d59b3e">
+</div><div id="outline-container-orgded1e90" class="outline-5">
+<h5 id="orgded1e90">Power of the tongue (3:1-12)</h5>
+</div>
+<div id="outline-container-org04f8239" class="outline-5">
+<h5 id="org04f8239">Pure speech comes from wisdom (3:13–18)</h5>
+</div>
+<div id="outline-container-orgd88b4bb" class="outline-5">
+<h5 id="orgd88b4bb">Pure prayer is without evil desire (4:1–10)</h5>
+<div class="outline-text-5" id="text-orgd88b4bb">
+</div><div id="outline-container-org145c5c9" class="outline-6">
+<h6 id="org145c5c9">Prayer that stems from evil desire (4:1–3)</h6>
+</div>
+<div id="outline-container-org0486be2" class="outline-6">
+<h6 id="org0486be2">Condemnation of compromise (4:4–6)</h6>
+</div>
+<div id="outline-container-org3f0ce00" class="outline-6">
+<h6 id="org3f0ce00">Call to repentance (4:7–10)</h6>
+</div>
+</div>
+<div id="outline-container-orgead9c84" class="outline-5">
+<h5 id="orgead9c84">Pure speech is uncondemning (4:11–12)</h5>
+</div>
+</div>
+<div id="outline-container-orga537523" class="outline-4">
+<h4 id="orga537523"><i>Testing</i> through wealth (4:13–5:6)</h4>
+<div class="outline-text-4" id="text-orga537523">
+</div><div id="outline-container-org828c14b" class="outline-5">
+<h5 id="org828c14b">The test of wealth (4:13–17)</h5>
+</div>
+<div id="outline-container-org247ea02" class="outline-5">
+<h5 id="org247ea02">The test by the wealthy (5:1–6)</h5>
+</div>
+</div>
+</div>
+<div id="outline-container-org35c7a12" class="outline-3">
+<h3 id="org35c7a12">Closing Statement (5:7–20)</h3>
+<div class="outline-text-3" id="text-org35c7a12">
+</div><div id="outline-container-org53574e1" class="outline-4">
+<h4 id="org53574e1">Endurance in the test (summary of 3 themes in the body; 5:7–11)</h4>
+</div>
+<div id="outline-container-org85a3bcf" class="outline-4">
+<h4 id="org85a3bcf">Rejection of oaths (5:12)</h4>
+</div>
+<div id="outline-container-orgf2d0bca" class="outline-4">
+<h4 id="orgf2d0bca">Helping one another through prayer and forgiveness (5:13–18)</h4>
+</div>
+<div id="outline-container-orga81d99a" class="outline-4">
+<h4 id="orga81d99a">Closing encouragements (5:19–20)</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org5f27629" class="outline-2">
+<h2 id="org5f27629">Archive</h2>
+<div class="outline-text-2" id="text-org5f27629">
+</div><div id="outline-container-org695a927" class="outline-3">
+<h3 id="org695a927">Outline (3 themes: ZECNT)</h3>
+<div class="outline-text-3" id="text-org695a927">
+</div><div id="outline-container-org3a30b25" class="outline-4">
+<h4 id="org3a30b25">Greetings (1:1)</h4>
+</div>
+<div id="outline-container-orgb9b92aa" class="outline-4">
+<h4 id="orgb9b92aa">Statement of 3 key themes (1:2-11)</h4>
+<div class="outline-text-4" id="text-orgb9b92aa">
+</div><div id="outline-container-org16d6630" class="outline-5">
+<h5 id="org16d6630">Trials in the Christian life (1:2-4)</h5>
+</div>
+<div id="outline-container-orge6906f1" class="outline-5">
+<h5 id="orge6906f1">Wisdom (1:5-8)</h5>
+</div>
+<div id="outline-container-orge7c8c5b" class="outline-5">
+<h5 id="orge7c8c5b">Riches and Poverty (1:9-11)</h5>
+</div>
+</div>
+<div id="outline-container-org1a9487e" class="outline-4">
+<h4 id="org1a9487e">Restatement of the 3 themes (1:12-27)</h4>
+<div class="outline-text-4" id="text-org1a9487e">
+</div><div id="outline-container-orgbfcf080" class="outline-5">
+<h5 id="orgbfcf080">Trials/temptations in relation to God (1:12-18)</h5>
+<div class="outline-text-5" id="text-orgbfcf080">
+<p>
+1:12 is hinge between 1:2-11 and 1:13-18
+</p>
+</div>
+</div>
+<div id="outline-container-org3ad7b8b" class="outline-5">
+<h5 id="org3ad7b8b">Wisdom in the areas of speech and obedience (1:19-26)</h5>
+<div class="outline-text-5" id="text-org3ad7b8b">
+<p>
+James focus more on speech than wisdom, but the 2 are intertwined in 3:1-4:12. James view them as closely linked.
+</p>
+</div>
+</div>
+<div id="outline-container-org695627a" class="outline-5">
+<h5 id="org695627a">The "have-nots" and the responsibility of the "haves": The thesis of the letter (1:27)</h5>
+<div class="outline-text-5" id="text-org695627a">
+<p>
+Shows necessity of personal piety and social action.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8cbc818" class="outline-4">
+<h4 id="org8cbc818">The 3 themes expanded (2:1-5:18)</h4>
+<div class="outline-text-4" id="text-org8cbc818">
+</div><div id="outline-container-orgcc81c9b" class="outline-5">
+<h5 id="orgcc81c9b">Riches and poverty (2:1-26)</h5>
+<div class="outline-text-5" id="text-orgcc81c9b">
+</div><div id="outline-container-orgc002645" class="outline-6">
+<h6 id="orgc002645">Favoritism condemned (2:1-13)</h6>
+</div>
+<div id="outline-container-org570d638" class="outline-6">
+<h6 id="org570d638">The problem of faith without works (2:14-26)</h6>
+</div>
+</div>
+<div id="outline-container-orgd0879e8" class="outline-5">
+<h5 id="orgd0879e8">Wisdom and speech (3:1-4:12)</h5>
+<div class="outline-text-5" id="text-orgd0879e8">
+</div><div id="outline-container-org80bbb1e" class="outline-6">
+<h6 id="org80bbb1e">THe power of the tongue (3:1-12)</h6>
+</div>
+<div id="outline-container-org430fa2c" class="outline-6">
+<h6 id="org430fa2c">Wisdom from above and wisdom from below (3:13-18)</h6>
+</div>
+<div id="outline-container-org26d356f" class="outline-6">
+<h6 id="org26d356f">The misuse of speech in quarrels and slander (4:1-12)</h6>
+</div>
+</div>
+<div id="outline-container-orgf046be1" class="outline-5">
+<h5 id="orgf046be1">Trials and temptations (4:13-5:18)</h5>
+<div class="outline-text-5" id="text-orgf046be1">
+</div><div id="outline-container-orga167d4d" class="outline-6">
+<h6 id="orga167d4d">Planning apart from God's will (4:13-17)</h6>
+</div>
+<div id="outline-container-org4b310fd" class="outline-6">
+<h6 id="org4b310fd">Responding to oppression (5:1-12)</h6>
+</div>
+<div id="outline-container-org2b92def" class="outline-6">
+<h6 id="org2b92def">Anointing prayer for serious illness (5:13-18)</h6>
+</div>
+</div>
+</div>
+<div id="outline-container-orgde8ff62" class="outline-4">
+<h4 id="orgde8ff62">Closing (5:19-20)</h4>
+</div>
+</div>
+<div id="outline-container-org30a1482" class="outline-3">
+<h3 id="org30a1482">Outline (3 themes: NIGTC)</h3>
+<div class="outline-text-3" id="text-org30a1482">
+</div><div id="outline-container-org52577fc" class="outline-4">
+<h4 id="org52577fc">Epistolary introduction (1:1)</h4>
+</div>
+<div id="outline-container-org76f482d" class="outline-4">
+<h4 id="org76f482d">Double-opening Statement (1:2–27)</h4>
+<div class="outline-text-4" id="text-org76f482d">
+</div><div id="outline-container-org51d5579" class="outline-5">
+<h5 id="org51d5579">First segment: testing, wisdom, wealth (Introduces 3 themes) (1:2-11)</h5>
+<div class="outline-text-5" id="text-org51d5579">
+</div><div id="outline-container-orga47502c" class="outline-6">
+<h6 id="orga47502c"><i>Testing</i> produces joy (1:2–4)</h6>
+</div>
+<div id="outline-container-org4c18411" class="outline-6">
+<h6 id="org4c18411"><i>Wisdom</i> through prayer (1:5–8)</h6>
+</div>
+<div id="outline-container-org397f20b" class="outline-6">
+<h6 id="org397f20b"><i>Poverty</i> exceeds wealth (1:9–11)</h6>
+</div>
+</div>
+<div id="outline-container-orgcc17fac" class="outline-5">
+<h5 id="orgcc17fac">Second segment: testing, speech, generosity (Expands on 3 themes) (1:12-27)</h5>
+<div class="outline-text-5" id="text-orgcc17fac">
+</div><div id="outline-container-org57efd93" class="outline-6">
+<h6 id="org57efd93"><i>Testing</i> produces blessedness (1:12–18)</h6>
+</div>
+<div id="outline-container-orgca9a5b4" class="outline-6">
+<h6 id="orgca9a5b4"><i>Pure speech</i> contains no anger (1:19–21)</h6>
+</div>
+<div id="outline-container-org735a7e3" class="outline-6">
+<h6 id="org735a7e3">Obedience requires <i>generosity</i> (1:22–25)</h6>
+</div>
+<div id="outline-container-orgd614cee" class="outline-6">
+<h6 id="orgd614cee">[Summary and Transition] (1:26–27)</h6>
+</div>
+</div>
+</div>
+<div id="outline-container-org70cda70" class="outline-4">
+<h4 id="org70cda70">Body (2:1–5:6): (Develops 3 themes in reverse order)</h4>
+<div class="outline-text-4" id="text-org70cda70">
+</div><div id="outline-container-org754e8b8" class="outline-5">
+<h5 id="org754e8b8">Excellence of <i>poverty and generosity</i> (2:1–26)</h5>
+<div class="outline-text-5" id="text-org754e8b8">
+</div><div id="outline-container-org4da20a5" class="outline-6">
+<h6 id="org4da20a5">No partiality is allowable 2:1–13</h6>
+<div class="outline-text-6" id="text-org4da20a5">
+</div><div id="outline-container-org13abda0" class="outline-7">
+<h7 id="org13abda0">Illustration: judicial assembly 2:1–4</h7>
+</div>
+<div id="outline-container-org687e57b" class="outline-7">
+<h7 id="org687e57b">Rational argument 2:5–7</h7>
+</div>
+<div id="outline-container-org54c2782" class="outline-7">
+<h7 id="org54c2782">Biblical argument 2:8–12</h7>
+</div>
+<div id="outline-container-orgf34c23e" class="outline-7">
+<h7 id="orgf34c23e">Call to obedience (transition) 2:13</h7>
+</div>
+</div>
+<div id="outline-container-org11eab2d" class="outline-6">
+<h6 id="org11eab2d">Generosity is necessary 2:14–26</h6>
+<div class="outline-text-6" id="text-org11eab2d">
+</div><div id="outline-container-orgb2fdbeb" class="outline-7">
+<h7 id="orgb2fdbeb">a.      Illustration: poor Christian 2:14–17</h7>
+</div>
+<div id="outline-container-orgaf5d61a" class="outline-7">
+<h7 id="orgaf5d61a">b.      Rational argument 2:18–20</h7>
+</div>
+<div id="outline-container-org1c44032" class="outline-7">
+<h7 id="org1c44032">c.      Biblical argument (two-part): Abraham; Rahab 2:21–26</h7>
+</div>
+</div>
+</div>
+<div id="outline-container-org2dd52a0" class="outline-5">
+<h5 id="org2dd52a0">Demand for <i>pure speech</i> (3:1–4:12)</h5>
+<div class="outline-text-5" id="text-org2dd52a0">
+</div><div id="outline-container-org85006d0" class="outline-6">
+<h6 id="org85006d0">Pure speech has no anger (3:1–12)</h6>
+<div class="outline-text-6" id="text-org85006d0">
+</div><div id="outline-container-org09b20e7" class="outline-7">
+<h7 id="org09b20e7">Warning against self-exaltation (3:1–2a)</h7>
+</div>
+<div id="outline-container-org1b20b5f" class="outline-7">
+<h7 id="org1b20b5f">Warning about the power of the tongue (3:2b–5a)</h7>
+</div>
+<div id="outline-container-orgc47a3c3" class="outline-7">
+<h7 id="orgc47a3c3">Warning about the doubleness in the tongue (3:5b–12)</h7>
+</div>
+</div>
+<div id="outline-container-orgf3fe0a4" class="outline-6">
+<h6 id="orgf3fe0a4">Pure speech comes from wisdom (3:13–18)</h6>
+</div>
+<div id="outline-container-org16be9d0" class="outline-6">
+<h6 id="org16be9d0">Pure prayer is without anger/in trust (4:1–10)</h6>
+<div class="outline-text-6" id="text-org16be9d0">
+</div><div id="outline-container-org2fa48c8" class="outline-7">
+<h7 id="org2fa48c8">Prayer with anger and desire (4:1–3)</h7>
+</div>
+<div id="outline-container-orge0bf5fb" class="outline-7">
+<h7 id="orge0bf5fb">Condemnation of compromise (4:4–6)</h7>
+</div>
+<div id="outline-container-org26df704" class="outline-7">
+<h7 id="org26df704">Call to repentance (4:7–10)</h7>
+</div>
+</div>
+<div id="outline-container-orgaa7ef6a" class="outline-6">
+<h6 id="orgaa7ef6a">Pure speech is uncondemning (4:11–12)</h6>
+</div>
+</div>
+<div id="outline-container-org22553a1" class="outline-5">
+<h5 id="org22553a1"><i>Testing</i> through wealth (4:13–5:6)</h5>
+<div class="outline-text-5" id="text-org22553a1">
+</div><div id="outline-container-org55e4e08" class="outline-6">
+<h6 id="org55e4e08">The test of wealth (4:13–17)</h6>
+</div>
+<div id="outline-container-orgb3e772f" class="outline-6">
+<h6 id="orgb3e772f">The test by the wealthy (5:1–6)</h6>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb1c7916" class="outline-4">
+<h4 id="orgb1c7916">Closing Statement (5:7–20)</h4>
+<div class="outline-text-4" id="text-orgb1c7916">
+</div><div id="outline-container-orgd6ed63e" class="outline-5">
+<h5 id="orgd6ed63e">Endurance in the test (summary of 3 themes in the body; 5:7–11)</h5>
+</div>
+<div id="outline-container-org5946ee4" class="outline-5">
+<h5 id="org5946ee4">Rejection of oaths (5:12)</h5>
+</div>
+<div id="outline-container-org661839c" class="outline-5">
+<h5 id="org661839c">Helping one another through prayer and forgiveness (5:13–18)</h5>
+</div>
+<div id="outline-container-orgff67b17" class="outline-5">
+<h5 id="orgff67b17">Closing encouragements (5:19–20)</h5>
+</div>
+</div>
+</div>
+<div id="outline-container-org48b196a" class="outline-3">
+<h3 id="org48b196a">Outline (Genuine faith: BECNT)</h3>
+<div class="outline-text-3" id="text-org48b196a">
+</div><div id="outline-container-org6855ec4" class="outline-4">
+<h4 id="org6855ec4">Salutation (1:1)</h4>
+</div>
+<div id="outline-container-org41ae481" class="outline-4">
+<h4 id="org41ae481">Overview of the life of faith (1:2–27)</h4>
+<div class="outline-text-4" id="text-org41ae481">
+<ul class="org-ul">
+<li>Introduces the concerns that will be developed later in Jas 2-5.
+<ul class="org-ul">
+<li>importance of genuine and unwavering faith</li>
+<li>nature and desirability of wisdom</li>
+<li>not just hearing, but doing God's word</li>
+<li>importance of self-control</li>
+<li>problem of self-deception</li>
+<li>dangers of wealth and blessing of the poor</li>
+<li>importance of prayer</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-orgf401035" class="outline-5">
+<h5 id="orgf401035">A. Faith and wisdom (1:2–8) [“brothers”]</h5>
+<div class="outline-text-5" id="text-orgf401035">
+<ul class="org-ul">
+<li>Presents the 2 overarching concerns of faith and wisdom
+<ul class="org-ul">
+<li>James is esp. interested in genuine faith</li>
+<li>Wisdom is needed to face problems that put this faith to the test.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9313fb6" class="outline-5">
+<h5 id="org9313fb6">B. Pride and wealth (1:9–12)</h5>
+</div>
+<div id="outline-container-orgf2fd8c3" class="outline-5">
+<h5 id="orgf2fd8c3">C. Faith and testing (1:13–18)</h5>
+</div>
+<div id="outline-container-orgb6602dd" class="outline-5">
+<h5 id="orgb6602dd">D. Doing the word of God (1:19–25) [“brothers”]</h5>
+</div>
+<div id="outline-container-org425c522" class="outline-5">
+<h5 id="org425c522">E. True religion (1:26–27) [summary statement]</h5>
+</div>
+</div>
+<div id="outline-container-orgb7a462f" class="outline-4">
+<h4 id="orgb7a462f">1st Discourse: Faith and behavior (2:1–26)</h4>
+<div class="outline-text-4" id="text-orgb7a462f">
+</div><div id="outline-container-orgb1b7856" class="outline-5">
+<h5 id="orgb1b7856">A. Part 1: Faith, favoritism, and law (2:1–13) [“brothers”; apophthegm]</h5>
+<div class="outline-text-5" id="text-orgb1b7856">
+</div><div id="outline-container-org6390a02" class="outline-6">
+<h6 id="org6390a02">Faith and favoritism (2:1–7)</h6>
+</div>
+<div id="outline-container-orgebff3f2" class="outline-6">
+<h6 id="orgebff3f2">Faith and law (2:8–13)</h6>
+</div>
+</div>
+<div id="outline-container-orgc5fe91d" class="outline-5">
+<h5 id="orgc5fe91d">B. Part 2: Faith and works (2:14–26) [“brothers”; apophthegm]</h5>
+</div>
+</div>
+<div id="outline-container-org45c4215" class="outline-4">
+<h4 id="org45c4215">2nd Discourse: Faith, wisdom, and speech ethics (3:1–18)</h4>
+<div class="outline-text-4" id="text-org45c4215">
+</div><div id="outline-container-org73c5da8" class="outline-5">
+<h5 id="org73c5da8">A. Part 1: Teachers, tongues, and turmoil (3:1–12) [“brothers”; apophthegm]</h5>
+</div>
+<div id="outline-container-org5c5f26a" class="outline-5">
+<h5 id="org5c5f26a">B. Part 2: Wisdom from above (3:13–18) [apophthegm]</h5>
+</div>
+</div>
+<div id="outline-container-orgcbb5bf4" class="outline-4">
+<h4 id="orgcbb5bf4">3rd Discourse: Strife in the church as lack of faith (4:1–12)</h4>
+<div class="outline-text-4" id="text-orgcbb5bf4">
+</div><div id="outline-container-orgab6483e" class="outline-5">
+<h5 id="orgab6483e">A. Part 1: Lusts and repentance (4:1–10) [apophthegm imperative]</h5>
+</div>
+<div id="outline-container-org799536f" class="outline-5">
+<h5 id="org799536f">B. Part 2: Defamation and censure (4:11–12) [“brothers”; apophthegm]</h5>
+</div>
+</div>
+<div id="outline-container-org495aa07" class="outline-4">
+<h4 id="org495aa07">Interjection: Two oracles of warning (4:13–5:6)</h4>
+<div class="outline-text-4" id="text-org495aa07">
+</div><div id="outline-container-org3855d2e" class="outline-5">
+<h5 id="org3855d2e">A. Oracle 1: Warning to merchants (4:13–17) [apophthegm indictment]</h5>
+</div>
+<div id="outline-container-orga110a6c" class="outline-5">
+<h5 id="orga110a6c">B. Oracle 2: Warning to landlords (5:1–6) [apophthegm indictment]</h5>
+</div>
+</div>
+<div id="outline-container-org3096fc5" class="outline-4">
+<h4 id="org3096fc5">4th Discourse: Looking to God (5:7–18)</h4>
+<div class="outline-text-4" id="text-org3096fc5">
+</div><div id="outline-container-org24f8785" class="outline-5">
+<h5 id="org24f8785">A. Part 1: Faith and patience (5:7–11) [“brothers”; apophthegm imperative]</h5>
+</div>
+<div id="outline-container-orgfabb8d2" class="outline-5">
+<h5 id="orgfabb8d2">B. Bridge verse: Prohibition of oaths (5:12)</h5>
+</div>
+<div id="outline-container-org9b472f8" class="outline-5">
+<h5 id="org9b472f8">C. Part 2: Faith and prayer (5:13–18) [apophthegm in v. 16]</h5>
+</div>
+</div>
+<div id="outline-container-orgba9b8f0" class="outline-4">
+<h4 id="orgba9b8f0">Closing exhortation: Mutual responsibility and blessing (5:19–20) [“brothers”; apophthegm]</h4>
+</div>
+</div>
+<div id="outline-container-orgc07dafc" class="outline-3">
+<h3 id="orgc07dafc">Outline (Spiritual wholeness: PNTC)</h3>
+<div class="outline-text-3" id="text-orgc07dafc">
+</div><div id="outline-container-orgc22971f" class="outline-4">
+<h4 id="orgc22971f">Address and Greeting (1:1)</h4>
+</div>
+<div id="outline-container-orgbc70de1" class="outline-4">
+<h4 id="orgbc70de1">The pursuit of spiritual wholeness: the opportunity afforded by trials (1:2–18)</h4>
+<div class="outline-text-4" id="text-orgbc70de1">
+</div><div id="outline-container-org6bb06d0" class="outline-5">
+<h5 id="org6bb06d0">Enduring trials brings spiritual maturity (1:2–4)</h5>
+</div>
+<div id="outline-container-org7db8741" class="outline-5">
+<h5 id="org7db8741">Wholeness requires wisdom, which God gives to all who ask in faith (1:5–8)</h5>
+</div>
+<div id="outline-container-org05968fc" class="outline-5">
+<h5 id="org05968fc">Both poor and rich Christians need to view themselves as God does (1:9–11)</h5>
+</div>
+<div id="outline-container-orgbc65d75" class="outline-5">
+<h5 id="orgbc65d75">God rewards the person who endures trials (1:12)</h5>
+</div>
+<div id="outline-container-org977fe6d" class="outline-5">
+<h5 id="org977fe6d">While God tests his people, he never tempts them to sin (1:13–18)</h5>
+</div>
+</div>
+<div id="outline-container-org377fc52" class="outline-4">
+<h4 id="org377fc52">The evidence of spiritual wholeness: obedience to the word (1:19–2:26)</h4>
+<div class="outline-text-4" id="text-org377fc52">
+</div><div id="outline-container-orgb63b7de" class="outline-5">
+<h5 id="orgb63b7de">Hasty speech and anger do not please God (1:19–20)</h5>
+</div>
+<div id="outline-container-orgf49c7d5" class="outline-5">
+<h5 id="orgf49c7d5">Obedience to the Word is the mark of genuine Christianity (1:21–27)</h5>
+<div class="outline-text-5" id="text-orgf49c7d5">
+</div><div id="outline-container-orgb84a331" class="outline-6">
+<h6 id="orgb84a331">Accept God’s word (1:21)</h6>
+</div>
+<div id="outline-container-org93fa9d4" class="outline-6">
+<h6 id="org93fa9d4">Accepting God’s word means doing it (1:22–25)</h6>
+<div class="outline-text-6" id="text-org93fa9d4">
+</div><div id="outline-container-orga9c7f1a" class="outline-7">
+<h7 id="orga9c7f1a">Imperative (1:22)</h7>
+</div>
+<div id="outline-container-org4204297" class="outline-7">
+<h7 id="org4204297">Illustration, shows importance of doing and not merely hearing (1:23–25)</h7>
+</div>
+<div id="outline-container-org99ba801" class="outline-7">
+<h7 id="org99ba801">3 ways of doing the word/law (1:26–27)</h7>
+</div>
+</div>
+</div>
+<div id="outline-container-org07547a6" class="outline-5">
+<h5 id="org07547a6">Discrimination against the poor violates kingdom law (2:1–13)</h5>
+<div class="outline-text-5" id="text-org07547a6">
+</div><div id="outline-container-orgf430edb" class="outline-6">
+<h6 id="orgf430edb">Thesis (2:1)</h6>
+</div>
+<div id="outline-container-org2a21404" class="outline-6">
+<h6 id="org2a21404">Example and conclusion (2:2–4)</h6>
+</div>
+<div id="outline-container-orgc3dbac1" class="outline-6">
+<h6 id="orgc3dbac1">3 Reasons (2:5–13)</h6>
+<div class="outline-text-6" id="text-orgc3dbac1">
+</div><div id="outline-container-orgd5ed566" class="outline-7">
+<h7 id="orgd5ed566">Reason #1 (theological): It contradicts God’s own evaluation (2:5–6a)</h7>
+</div>
+<div id="outline-container-org1e3f691" class="outline-7">
+<h7 id="org1e3f691">Reason #2 (mainly pragmatic): It makes no sense (2:6b–7)</h7>
+</div>
+<div id="outline-container-org34f9c59" class="outline-7">
+<h7 id="org34f9c59">Reason #3: it violates the kingdom law of love (2:8–13)</h7>
+</div>
+</div>
+</div>
+<div id="outline-container-org83b8cc2" class="outline-5">
+<h5 id="org83b8cc2">Saving faith reveals itself in works (2:14–26)</h5>
+<div class="outline-text-5" id="text-org83b8cc2">
+</div><div id="outline-container-org18cdb76" class="outline-6">
+<h6 id="org18cdb76">Introduction of topic: faith without works cannot save (2:14)</h6>
+<div class="outline-text-6" id="text-org18cdb76">
+<p class="verse">
+14 What good is it (τί τὸ ὄφελος), my brothers and sisters, if someone claims to have faith but has no deeds (ἔργα)? Can such faith save them (μὴ δύναται ἡ  πίστις σῶσαι αὐτόν)?<br />
+</p>
+<ul class="org-ul">
+<li>deeds:</li>
+<li>save him:</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgde4284e" class="outline-6">
+<h6 id="orgde4284e">Illustration (2:15–16)</h6>
+</div>
+<div id="outline-container-org5f656c3" class="outline-6">
+<h6 id="org5f656c3">Implication of illustration (2:17) "faith by itself, if it is not accompanied by action, is dead"</h6>
+<div class="outline-text-6" id="text-org5f656c3">
+<p class="verse">
+17 In the same way (οὕτως),faith by itself (καθʼ ἑαυτήν), if it is not accompanied by action (ἔργα), is dead (νεκρά).<br />
+</p>
+<ul class="org-ul">
+<li>καθʼ ἑαυτήν: by itself | in itself</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8d4bfe2" class="outline-6">
+<h6 id="org8d4bfe2">Objection and Response (2:18–26)</h6>
+<div class="outline-text-6" id="text-org8d4bfe2">
+</div><div id="outline-container-org8d2ec73" class="outline-7">
+<h7 id="org8d2ec73">Interlocutor: Faith and deeds are separable (2:18a)</h7>
+<div class="outline-text-7" id="text-org8d2ec73">
+<p class="verse">
+18 But someone will say, “You have faith; I have deeds.”<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgb67ab97" class="outline-7">
+<h7 id="orgb67ab97">James: Faith can only be shown by deeds (2:18b–19)</h7>
+<div class="outline-text-7" id="text-orgb67ab97">
+<p class="verse">
+Show (δεῖξόν) me your faith without deeds, and I will show you my faith by my deeds. 19 You believe that there is one God (εἷς ἐστιν ὁ θεός). Good! Even the demons believe that—and shudder.<br />
+</p>
+<ul class="org-ul">
+<li>God is one:</li>
+<li>shudder:</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8b1c55f" class="outline-7">
+<h7 id="org8b1c55f">James: Faith without deeds is useless (2:20–25)</h7>
+<div class="outline-text-7" id="text-org8b1c55f">
+</div><div id="outline-container-orgf073294" class="outline-8">
+<h8 id="orgf073294">Statement: Faith without deeds is useless (2:20)</h8>
+<div class="outline-text-8" id="text-orgf073294">
+<p class="verse">
+20 You foolish person (ὦ ἄνθρωπε κενέ), do you want evidence (θέλεις &#x2026; γνῶναι) that faith without deeds (χωρὶς τῶν ἔργων) is useless (ἀργή)?<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org3f4936f" class="outline-8">
+<h8 id="org3f4936f">Example of Abraham: a faith that works (2:21)</h8>
+<div class="outline-text-8" id="text-org3f4936f">
+<p class="verse">
+21  Was not our father Abraham considered righteous for what he did (ἐξ ἔργων ἐδικαιώθη) when he offered (ἀνενέγκας) his son Isaac on the altar (Gen 22)? 22 You see that his faith and his actions were working together (ἡ πίστις συνήργει τοῖς ἔργοις αὐτοῦ), and his faith was made complete by what he did (ἐκ τῶν ἔργων ἡ πίστις ἐτελειώθη). 23 And (καί) the scripture was fulfilled (ἐπληρώθη) that says, “Abraham believed God, and it was credited to him as righteousness,” (Gen 15:6) and he was called God’s friend.<br />
+</p>
+
+<ul class="org-ul">
+<li>considered righteous for what he did (ἐξ ἔργων ἐδικαιώθη):</li>
+<li>his faith and actions were working together (ἡ πίστις συνήργει τοῖς ἔργοις αὐτοῦ):</li>
+<li>his faith was made complete by what he did (ἐκ τῶν ἔργων ἡ πίστις ἐτελειώθη):
+<ul class="org-ul">
+<li>τελειόω + ἐκ is not found anywhere else in the NT.</li>
+<li>1 John 4:12 “If we love one another, God lives in us and his love is made complete in us (ἡ ἀγάπη αὐτοῦ ἐν ἡμῖν τετελειωμένη ἐστίν).”</li>
+</ul></li>
+<li>Scripture was fulfilled (ἐπληρώθη):</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org710ca5f" class="outline-8">
+<h8 id="org710ca5f">Conclusion: Justification requires faith and works (2:24)</h8>
+<div class="outline-text-8" id="text-org710ca5f">
+<p class="verse">
+24  You see that a person is considered righteous by what they do (ἐξ ἔργων δικαιοῦται ἄνθρωπος) and not by faith alone (καὶ οὐκ ἐκ πίστεως μόνον).<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orge4a34ba" class="outline-8">
+<h8 id="orge4a34ba">Example of Rahab: a faith that works (2:25)</h8>
+<div class="outline-text-8" id="text-orge4a34ba">
+<p class="verse">
+25 In the same way, was not even Rahab  the prostitute considered righteous for what she did when she gave lodging to the spies and sent them off in a different direction?<br />
+</p>
+<ul class="org-ul">
+<li>Note // with Abraham
+<ul class="org-ul">
+<li>2:21 Was not our ancestor Abraham considered righteous for what he did</li>
+<li>2:25 Was not even Rahab the harlot considered righteous for what he did</li>
+<li>2:21 &#x2026; when he offered his son Isaac on the altar?</li>
+<li>2:25 &#x2026; when she gave lodging to the spies and sent them off in a different direction?</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org53a1b06" class="outline-7">
+<h7 id="org53a1b06">James: Faith without deeds is dead (2:26)</h7>
+<div class="outline-text-7" id="text-org53a1b06">
+<p class="verse">
+26 As the body without the spirit is dead (ὥσπερ γὰρ τὸ σῶμα χωρὶς πνεύματος νεκρόν ἐστιν), so faith without deeds is dead (οὕτως καὶ ἡ πίστις χωρὶς ἔργων νεκρά ἐστιν).<br />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org20eec9d" class="outline-4">
+<h4 id="org20eec9d">The community dimension of spiritual wholeness: Pure speech and peace, part 1 (3:1–4:3)</h4>
+<div class="outline-text-4" id="text-org20eec9d">
+</div><div id="outline-container-org265817c" class="outline-5">
+<h5 id="org265817c">Control of the tongue manifests the transformed heart (3:1–12)</h5>
+</div>
+<div id="outline-container-org5e34fb7" class="outline-5">
+<h5 id="org5e34fb7">True wisdom brings peace (3:13–4:3)</h5>
+</div>
+</div>
+<div id="outline-container-org6d2b093" class="outline-4">
+<h4 id="org6d2b093">A summons to spiritual wholeness (4:4–10)</h4>
+</div>
+<div id="outline-container-org12bb5b5" class="outline-4">
+<h4 id="org12bb5b5">The community dimension of spiritual wholeness: Pure speech and peace, part 2 (4:11–12)</h4>
+</div>
+<div id="outline-container-org4010c1e" class="outline-4">
+<h4 id="org4010c1e">The worldview of spiritual wholeness: understanding time and eternity (4:13–5:11)</h4>
+<div class="outline-text-4" id="text-org4010c1e">
+</div><div id="outline-container-orge646ca3" class="outline-5">
+<h5 id="orge646ca3">Worldview that leaves God out: self-reliance (4:13–17)</h5>
+</div>
+<div id="outline-container-orgfbcf801" class="outline-5">
+<h5 id="orgfbcf801">Worldview that leaves God out: self-indulgence (5:1–6)</h5>
+</div>
+<div id="outline-container-orgc61e04f" class="outline-5">
+<h5 id="orgc61e04f">Worldview that takes God into account: patient endurance (5:7–11)</h5>
+</div>
+</div>
+<div id="outline-container-org7ced542" class="outline-4">
+<h4 id="org7ced542">Concluding exhortations (5:12–20)</h4>
+<div class="outline-text-4" id="text-org7ced542">
+</div><div id="outline-container-org085cb50" class="outline-5">
+<h5 id="org085cb50">Avoid oaths (5:12)</h5>
+</div>
+<div id="outline-container-org66b8ff4" class="outline-5">
+<h5 id="org66b8ff4">Prayer and healing (5:13–18)</h5>
+</div>
+<div id="outline-container-org4686843" class="outline-5">
+<h5 id="org4686843">A concluding summons to action (5:19–20)</h5>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfad56c1" class="outline-3">
+<h3 id="orgfad56c1">Lesson Plan</h3>
+<div class="outline-text-3" id="text-orgfad56c1">
+<ul class="org-ul">
+<li>Postcolonial reading:
+<ul class="org-ul">
+<li>Mongstad-Kvammen, <i>Towards a Postcolonial Reading of the Epistle of James</i>.</li>
+<li>Coker, <i>James in Postcolonial Perspective</i></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2017-11-29 Wed 15:06</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
